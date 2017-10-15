@@ -11,7 +11,7 @@ class UserConfig {
 </ label="--------  HyperPie Main Menu Option  --------", help="Brought to you by Project HyperPie", order=1 /> uct1="Select Below";
    </ label="Select or Disable Background Image", help="Select theme background", options="Per System,Per Title,City Lights, Pixel Skyline, Pixel Dojo, Neon, Flyer ,None", order=2 /> enable_bg="Flyer"; 
     </ label="Enable Title", help="Enable Title", options="Yes, No", order=2 /> enable_title="Yes";    
-	</ label="Enable Border Overlay", help="Enable Border Overlay", options="Yes,No", order=2 /> enable_border="No"; 
+	</ label="Enable Border Overlay", help="Enable Border Overlay", options="Yes,No", order=2 /> enable_border="Yes"; 
     </ label="Select or Disable Overlay Image", help="Select theme overlay", options="Snazzy, Snazzy On Top, Off", order=2 /> enable_overlay="Off"; 
 	</ label="Select Overlay Opacity", help="Select theme overlay opacity between 50-255", options="50, 100, 150, 200, 255", order=2 /> overlay_opacity="100"; 
 	</ label="Enabe or Disable Frame Around Video", help="Select frame option", options="Yes, No", order=3 /> enable_frame="No";  
@@ -278,7 +278,7 @@ overlay_art.alpha=my_config["overlay_opacity"].tointeger();
 /////////////////////
 
 if ( my_config["videomode"] == "Center") {
-local snap = FadeArt( "snap", flx*0.035, fly*0.155, flw*0.65, flh*0.7 );
+local snap = FadeArt( "snap", flx*0.01, fly*0.155, flw*0.68, flh*0.7 );
 snap.trigger = Transition.EndNavigation;
 snap.preserve_aspect_ratio = true;
 }
@@ -340,7 +340,7 @@ if ( my_config["enable_bigart3"] == "Yes" )
 if ( my_config["select_bigartposition3"] == "Right" ){
 local flx = ( fe.layout.width - layout_width ) / 2
 local fly = ( fe.layout.height - layout_height ) / 2
-local bigart = fe.add_artwork(( my_config["select_bigartfolder3"] ), flw + flx - crw - flyerW, bth, flyerW, flyerH );
+local bigart = fe.add_artwork(( my_config["select_bigartfolder3"] ), (flw + flx - crw - flyerW)*1.18, bth*1.74, flyerW*0.7, flyerH*0.7 );
 local flx = fe.layout.width;
 local fly = fe.layout.height;
 bigart.trigger = Transition.EndNavigation;
