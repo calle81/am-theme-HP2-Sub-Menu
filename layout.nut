@@ -11,12 +11,13 @@ class UserConfig {
 </ label="--------  HyperPie Main Menu Option  --------", help="Brought to you by Project HyperPie", order=1 /> uct1="Select Below";
    </ label="Select or Disable Background Image", help="Select theme background", options="Per System,Per Title,City Lights, Pixel Skyline, Pixel Dojo, Neon, Flyer ,None", order=2 /> enable_bg="Flyer"; 
     </ label="Enable Title", help="Enable Title", options="Yes, No", order=2 /> enable_title="Yes";    
-	</ label="Enable Border Overlay", help="Enable Border Overlay", options="Yes,No", order=2 /> enable_border="Yes"; 
+	</ label="Enable Border Overlay", help="Enable Border Overlay", options="Yes,No", order=2 /> enable_border="No"; 
     </ label="Select or Disable Overlay Image", help="Select theme overlay", options="Snazzy, Snazzy On Top, Off", order=2 /> enable_overlay="Off"; 
 	</ label="Select Overlay Opacity", help="Select theme overlay opacity between 50-255", options="50, 100, 150, 200, 255", order=2 /> overlay_opacity="100"; 
 	</ label="Enabe or Disable Frame Around Video", help="Select frame option", options="Yes, No", order=3 /> enable_frame="No";  
    	</ label="Enable Clock", help="Enable Clock", options="Yes,No", order=3 /> enable_clock="Yes";	
-	</ label="Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> bgrgb="20,40,60"
+	</ label="Border Overlay Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> bgrgb="0,0,0"
+	</ label="List Box Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> lbgrgb="20,40,60"
 	</ label="Video Frame Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of the frame.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> frrgb="250,250,250"
 	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=5 /> selrgb="255,255,0"
 	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=6 /> titrgb="255,255,0" 
@@ -127,6 +128,7 @@ function irand(max) {
 	return roll.tointeger()
 }
 local bgRYB = [irand(255), irand(255), irand(255)]
+local lbgRYB = [255 - bgRYB[0], 255 - bgRYB[1], 255 - bgRYB[2]]
 local selRYB = [255 - bgRYB[0], 255 - bgRYB[1], 255 - bgRYB[2]]
 local titRYB = [255 - bgRYB[0], 255 - bgRYB[1], 255 - bgRYB[2]]
 local gslRYB = [255 - bgRYB[0], 255 - bgRYB[1], 255 - bgRYB[2]]
@@ -134,6 +136,7 @@ local pldRYB = [255 - bgRYB[0], 255 - bgRYB[1], 255 - bgRYB[2]]
 local frRYB = [255 - bgRYB[0], 255 - bgRYB[1], 255 - bgRYB[2]]
 
 local bgRGB = ryb2rgb(bgRYB)
+local lbgRGB = ryb2rgb(titRYB)
 local selRGB = ryb2rgb(selRYB)
 local titRGB = ryb2rgb(titRYB)
 local gslRGB = ryb2rgb(titRYB)
@@ -141,6 +144,7 @@ local pldRGB = ryb2rgb(titRYB)
 local frRGB = ryb2rgb(titRYB)
 
 try { bgRGB = fe.nv[0] } catch(e) {}
+try { lbgRGB = fe.nv[0] } catch(e) {}
 try { selRGB = fe.nv[1] } catch(e) {}
 try { titRGB = fe.nv[1] } catch(e) {}
 try { gslRGB = fe.nv[1] } catch(e) {}
@@ -150,6 +154,12 @@ try { frRGB = fe.nv[1] } catch(e) {}
 local error_message = false
 if( my_config["bgrgb"] != "" ) {
 	try { bgRGB = split(my_config["bgrgb"], ",").map(function(value) return value.tointeger()) }
+	catch(e) { error_message = true}
+}
+
+local error_message = false
+if( my_config["lbgrgb"] != "" ) {
+	try { lbgRGB = split(my_config["lbgrgb"], ",").map(function(value) return value.tointeger()) }
 	catch(e) { error_message = true}
 }
 
@@ -176,7 +186,7 @@ if( my_config["frrgb"] != "" ) {
 	catch(e) { error_message = true}
 }
 
-if ( error_message || bgRGB.len() != 3 || selRGB.len() != 3 || titRGB.len() != 3 || gslRGB.len() != 3 || pldRGB.len() != 3 || frRGB.len() != 3)
+if ( error_message || bgRGB.len() != 3 ||  lbgRGB.len() != 3 ||  selRGB.len() != 3 || titRGB.len() != 3 || gslRGB.len() != 3 || pldRGB.len() != 3 || frRGB.len() != 3)
 	while (!fe.overlay.splash_message( "Background or Accent colour has a wrong format.\nPlease check it in Layout Options")){} 
 
 
@@ -193,7 +203,7 @@ try {	wheel_fade_ms = my_config["wheel_fade_ms"].tointeger(); } catch ( e ) { }
 
 if ( my_config["enable_bg"] == "Flyer")
 {
-local bgart = PanAndScanArt( "flyer", 0, 0, flw, flh);
+local bgart = PanAndScanImage( "../../menu-art/flyer/[DisplayName]", 0, 0, flw, flh);
 bgart.trigger = Transition.EndNavigation;
 bgart.preserve_aspect_ratio = false;
 bgart.set_fit_or_fill("fill");
@@ -202,14 +212,6 @@ bgart.set_zoom(4.5, 0.00008);
 bgart.set_animate(::AnimateType.Bounce, 0.50, 0.50)
 bgart.set_randomize_on_transition(true);
 bgart.set_start_scale(1.1);
- local alpha_cfg = {
-    when = Transition.ToNewSelection,
-    property = "alpha",
-    start = 0,
-    end = 200,
-    time = 3000
-}
-animation.add( PropertyAnimation( bgart, alpha_cfg ) );
 }
 
 if ( my_config["enable_bg"] == "City Lights") 
@@ -250,9 +252,9 @@ if ( my_config["enable_border"] == "Yes") {
 // Snap Background
 local flx = ( fe.layout.width - layout_width ) / 2
 local fly = ( fe.layout.height - layout_height ) / 2
-local snapBackground = fe.add_image( "images/gradientV.png", flx, bth, flw - crw, flh - bth - bbh )
-snapBackground.set_rgb( bgRGB[0] * 0.6, bgRGB[1] * 0.6, bgRGB[2] * 0.6 )
-snapBackground.alpha=100;
+//local snapBackground = fe.add_image( "images/gradientV.png", flx, bth, flw - crw, flh - bth - bbh )
+//snapBackground.set_rgb( bgRGB[0] * 0.6, bgRGB[1] * 0.6, bgRGB[2] * 0.6 )
+//snapBackground.alpha=0;
 
  // Top Background
 local bannerTop = fe.add_image( "white.png", flx, 0, flw, bth)
@@ -278,7 +280,7 @@ overlay_art.alpha=my_config["overlay_opacity"].tointeger();
 /////////////////////
 
 if ( my_config["videomode"] == "Center") {
-local snap = FadeArt( "snap", flx*0.01, fly*0.155, flw*0.68, flh*0.7 );
+local snap = FadeArt( "snap", flx*0.035, fly*0.155, flw*0.65, flh*0.7 );
 snap.trigger = Transition.EndNavigation;
 snap.preserve_aspect_ratio = true;
 }
@@ -340,7 +342,7 @@ if ( my_config["enable_bigart3"] == "Yes" )
 if ( my_config["select_bigartposition3"] == "Right" ){
 local flx = ( fe.layout.width - layout_width ) / 2
 local fly = ( fe.layout.height - layout_height ) / 2
-local bigart = fe.add_artwork(( my_config["select_bigartfolder3"] ), (flw + flx - crw - flyerW)*1.18, bth*1.74, flyerW*0.7, flyerH*0.7 );
+local bigart = fe.add_artwork(( my_config["select_bigartfolder3"] ), flw + flx - crw - flyerW, bth, flyerW, flyerH );
 local flx = fe.layout.width;
 local fly = fe.layout.height;
 bigart.trigger = Transition.EndNavigation;
@@ -889,7 +891,7 @@ function update_clock( ttime ){
 if ( my_config["enable_list_type"] == "Vertical Wheel" )
 {
 local wheelOverlay = fe.add_image ("white.png", flx*0.7, 0, flw*0.32, fly)
-wheelOverlay.set_rgb(bgRGB[0],bgRGB[1],bgRGB[2])
+wheelOverlay.set_rgb(lbgRGB[0],lbgRGB[1],lbgRGB[2])
 wheelOverlay.alpha = 200;
  local wheelOverlayFade = {
     when = Transition.ToNewSelection,
@@ -1519,7 +1521,7 @@ local flh = layout_height
 
 // Game ListBox Background
 local gameListBoxBackground = fe.add_text("", flx + flw - crw, 0, lbw, flh )
-gameListBoxBackground.set_bg_rgb( bgRGB[0] * 0.75, bgRGB[1] * 0.75, bgRGB[2] * 0.75 )
+gameListBoxBackground.set_bg_rgb( lbgRGB[0] * 0.75, lbgRGB[1] * 0.75, lbgRGB[2] * 0.75 )
 gameListBoxBackground.bg_alpha = 0
 
 
@@ -1663,7 +1665,7 @@ function year_formatted()
 
 local gameYearW = flw - crw - bbm - floor( bbh * 2.875 )
 local gameYearH = floor( bbh * 0.15 )
-local gameYear = fe.add_text( "Project HyperPie 2017]", flx + bbm, flh - bbm - gameYearH, gameYearW, gameYearH )
+local gameYear = fe.add_text( "Project HyperPie 2017", flx + bbm, flh - bbm - gameYearH, gameYearW, gameYearH )
 gameYear.align = Align.Left
 gameYear.style = Style.Regular
 gameYear.nomargin = true
