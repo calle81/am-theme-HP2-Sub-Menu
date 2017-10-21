@@ -203,7 +203,7 @@ try {	wheel_fade_ms = my_config["wheel_fade_ms"].tointeger(); } catch ( e ) { }
 
 if ( my_config["enable_bg"] == "Flyer")
 {
-local bgart = PanAndScanImage( "../../menu-art/flyer/[DisplayName]", 0, 0, flw, flh);
+local bgart = PanAndScanImage( "../../menu-art/flyer/[Title]", 0, 0, flw, flh);
 bgart.trigger = Transition.EndNavigation;
 bgart.preserve_aspect_ratio = false;
 bgart.set_fit_or_fill("fill");
@@ -212,6 +212,7 @@ bgart.set_zoom(4.5, 0.00008);
 bgart.set_animate(::AnimateType.Bounce, 0.50, 0.50)
 bgart.set_randomize_on_transition(true);
 bgart.set_start_scale(1.1);
+
 }
 
 if ( my_config["enable_bg"] == "City Lights") 
