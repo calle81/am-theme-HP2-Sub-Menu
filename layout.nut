@@ -3,75 +3,70 @@
 // HyperPie 2 theme by Carl
 // https://www.facebook.com/groups/1158678304181964/
 //
-// This theme borrows heavily from Oomeks Silky theme.
+// This theme is based on Oomeks Silky theme.
 //  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////   
 
 class UserConfig {
-</ label="--------  HyperPie Main Menu Option  --------", help="Brought to you by Project HyperPie", order=1 /> uct1="Select Below";
-   </ label="Background Image", help="Select theme background", options="System Flyer Pan & Scan, Black Logos Slide, Blue Logos Slide,Hursty HP2 Static,City Lights Slide, Pixel Skyline Slide, Neon Static, None", order=2 /> enable_bg="Blue Logos Slide"; 
-    </ label="Enable Title", help="Enable Title", options="Yes, No", order=2 /> enable_title="Yes";    
-	</ label="Enable Border Overlay", help="Enable Border Overlay", options="Yes,No", order=2 /> enable_border="Yes"; 
-      </ label="Background Music", help="Enable Background Music", options="Yes,No", order=1 /> enable_backgroundmusic="No";
-	</ label="Enabe or Disable Frame Around Video", help="Select frame option", options="Yes, No", order=3 /> enable_frame="No";  
-   	</ label="Enable Clock", help="Enable Clock", options="Yes,No", order=3 /> enable_clock="Yes";	
-	</ label="Border Overlay Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> bgrgb="0,0,0"
-	</ label="List Box Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> lbgrgb="20,40,60"
-	</ label="Video Frame Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of the frame.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=4 /> frrgb="250,250,250"
-	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=5 /> selrgb="255,255,0"
-	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=6 /> titrgb="255,255,0" 
-	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=7 /> gslrgb="254,58,124" 
-	</ label="Year and Manufacturer as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=8 /> pldrgb="254,255,255" 
- </ label="--------  Video Options  --------", help="Brought to you by Project HyperPie", order=9 /> uct2="Select Below";  
-   </ label="Select Video Mode", help="Select Video Mode and Positon, Window or Off", options="Full Screen,Off,Center", order=10 /> videomode="Center";   
-   </ label="Preserve Video Aspect Ratio", help="Preserve Video Aspect Ratio", options="Yes,No", order=11 /> Preserve_Aspect_Ratio="Yes";
-   </ label="Enble Scanlines", help="Show scanline effect", options="None,Light,Medium,Dark", order=12 /> enable_scanline="None";
-</ label="--------  Wheel Options  --------", help="Brought to you by Project HyperPie", order=13 /> uct3="Select Below";  
-   </ label="Select Wheel Layout", help="Select wheel type", options="List Box,Horizontal,Horizontal Animated,Vertical Wheel", order=15 /> enable_list_type="List Box";
-	</ label="Select Wheel Art Folder", help="The artwork to spin", options="wheel, marquee, flyer, fanart, cartart, boxart", order=16 /> orbit_art="wheel";
-   </ label="Wheel Transition Time", help="Time in milliseconds for wheel spin.", order=17 /> transition_ms="35";  
-   </ label="Wheel Fade Time", help="Time in milliseconds to fade the wheel.", options="Off,2500,5000,7500,10000,12500,15000,17500,20000,22500,25000,27500,30000", order=18 /> wheel_fade_ms="2500";
-   	</ label="Game List Rows", help="How many games to display on the List Box", options="11,13,15,17,19,21,23,25,27,29,31", order=19 /> rows="19"
-	</ label="Game List Auto Hide", help="Time in seconds after which game list hides\n0 disables auto hide and flyer. Default value is 1", option="0", order=20 /> glautohide="3"
-</ label="--------    Animated Wheel Effects     --------", help="Show or hide additional images", order=21 /> uct4="Select Below";
-   </ label="Enable Wheel Art Fade on Selection", help="Enable Wheel Art Fade on Selection", options="Yes,No", order=22 /> enable_wheelartfade="No";
-   </ label="Enable Wheel Art Fade on Load", help="Enable Wheel Art Fade on Load", options="Yes,No", order=23 /> enable_wheelartfadeonload="No"; 
-   </ label="Enable Wheel Art Scale on Selection", help="Disable Wheel Art Scale on Load", options="Yes,No", order=24 /> enable_wheelartscale="Yes"; 
-   </ label="Enable Wheel Art Scale on Load", help="Disable Big Art Scale on Load", options="Yes,No", order=25 /> enable_wheelartscaleonload="No"; 
-   </ label="Enable Wheel Art Rotate on Selection", help="Enable Wheel Art Rotate on Selection", options="Yes,No", order=26 /> enable_wheelartrotate="No";
-   </ label="Enable Wheel Art Rotate on Load", help="Enable Wheel Art Rotate on Load", options="Yes,No", order=27 /> enable_wheelartrotateonload="No";	 
-   </ label="Enable Wheel Art Fly-in on Selection", help="Enable Wheel Art Fly-in on Selection", options="Yes,No", order=28 /> enable_wheelartflyin="No";
- </ label="--------    Game Info    --------", help="Show or hide system name", order=29 /> uct5="Select Below";
-   </ label="Fade System/Game Title", help="Show System and Category Name", options="Yes, No", order=31 /> fadeWheelTitle="No";
-//   </ label="Show System/Game Title", help="Show System and Category Name", options="Yes, No", order=32 /> showTileTitle="No"; 
-//   </ label="Fade System/Game Title", help="Show System and Category Name", options="Yes, No", order=33 /> fadeTileTitle="No";   
-  </ label="--------    Game Description    --------", help="Game Description", order=36 /> uct6="Select Below";
-   </ label="Select Game Description Text Mode", help="Select Game Description Text Mode", options="Right,Popup,Off", order=37 /> select_description="Off";
-    </ label="--------    Cart Art Animation Otions     --------", help="Show or hide additional images", order=38 /> uct7="Select Below"
-   </ label="Enable System Image", help="Enable System Image Art", options="Yes,No", order=39 /> enable_systemimage="Yes";
-      </ label="Enable Character Image", help="Enable Character Image Art", options="Yes,No", order=39 /> enable_characterimage="Yes";
- </ label="--------    Cart Art Animation Otions     --------", help="Show or hide additional images", order=40 /> uct8="Select Below"
-   </ label="Enable Cart Art", help="Enable Cart Art", options="Yes,No", order=41 /> enable_bigart="No";
-   </ label="Select Cart Art Folder", help="Select Cart Art Folder", options="wheel, marquee, flyer, fanart, boxart, cartart", order=42 /> select_bigartfolder="cartart";
-   </ label="Enable Cart Art Fade on Selection", help="Enable Cart Art Fade on Selection", options="Yes,No", order=43 /> enable_bigartfade="No";
-   </ label="Enable Cart Art Fade on Load", help="Enable Cart Art Fade on Load", options="Yes,No", order=44 /> enable_bigartfadeonload="No"; 
-   </ label="Enable Cart Art Scale on Selection", help="Enable Cart Art Scale on Selection", options="Yes,No", order=45 /> enable_bigartscale="No"; 
-   </ label="Enable Cart Art Scale on Load", help="Enable Cart Art Scale on Load", options="Yes,No", order=46 /> enable_bigartscaleonload="No"; 
-   </ label="Enable Cart Art Rotate on Selection", help="Enable Cart Art Rotate on Selection", options="Yes,No", order=47 /> enable_bigartrotate="No";
-   </ label="Enable Cart Art Rotate on Load", help="Enable Cart Art Rotate on Load", options="Yes,No", order=48 /> enable_bigartrotateonload="No";	 
-   </ label="Enable Cart Art Fly-in on Selection", help="Enable Cart Art Fly-in on Selection", options="Yes,No", order=49 /> enable_bigartflyin="No";
-</ label="--------    Box Art Animation Otions     --------", help="Show or hide additional images", order=50 /> uct9="Select Below";
-   </ label="Enable Box Art", help="Enable Box Art", options="Yes,No", order=51 /> enable_bigart2="No";
-   </ label="Select Box Art Foldert", help="Select Box Art Folder", options="wheel, marquee, flyer, fanart, boxart, cartart", order=52 /> select_bigartfolder2="boxart";
-   </ label="Enable Box Art Fade on Selection", help="Enable Box Wheel Art Fade on Selection", options="Yes,No", order=53 /> enable_bigartfade2="No";
-   </ label="Enable Box Art Fade on Load", help="Enable Box Art Fade on Load", options="Yes,No", order=54 /> enable_bigartfadeonload2="No"; 
-   </ label="Enable Box Art Scale on Selection", help="Enable Box Art Scale on Selection", options="Yes,No", order=55 /> enable_bigartscale2="No"; 
-   </ label="Enable Box Art Scale on Load", help="Enable Box Art Scale on Load", options="Yes,No", order=56 /> enable_bigartscaleonload2="No"; 
-   </ label="Enable Box Art Rotate on Selection", help="Enable Box Art Rotate on Selection", options="Yes,No", order=57 /> enable_bigartrotate2="No";
-   </ label="Enable Box Art Rotate on Load", help="Enable Box Art Rotate on Load", options="Yes,No", order=58 /> enable_bigartrotateonload2="No";	 
-   </ label="Enable Box Art Fly-in on Selection", help="Enable Box Art Fly-in on Selection", options="Yes,No", order=59 /> enable_bigartflyin2="No";
-</ label="--------    Flyer Animation Otions     --------", help="Show or hide additional images", order=60 /> uct10="Select Below";
-   </ label="Enable Flyer Art", help="Enable Flyer Art", options="Yes,No", order=61 /> enable_bigart3="Yes";
+	</ label="HYPERPIE2 SUB MENU OPTIONS", help="Brought to you by Project HyperPie", order=1 /> uct1=" ";
+	</ label=" ", help="Brought to you by Project HyperPie", order=2 /> uct2=" ";
+
+	</ label="GENERAL SETTINGS", help="Brought to you by Project HyperPie", order=3 /> uct3=" ";
+	</ label="Background Image", help="Select theme background", options="System Flyer Pan & Scan, City Lights, Pixel Skyline, Grid Logos Dark Blue, Grid Logos Dark Grey, Grid Logos Green, Grid Logos Light Blue, Grid Logos Light Grey, Grid Logos Mid Blue, Grid Logos Mid Blue, Grid Logos Orange, Grid Logos Pink, Grid Logos Purple, Grid Logos Red, Grid Logos Turquoise, Grid Logos Yellow, Logos Dark Blue, Logos Dark Grey, Logos Green, Logos Light Blue, Logos Light Grey, Logos Light Turquoise, Logos Mid Blue, Logos Orange, Logos Pink, Logos Purple, Logos Red, Logos Turquoise, Logos Yellow, Mono Logos Blue, Mono Logos Black, Neon, None", order=4 /> enable_bg="Logos Red";     
+	</ label="Border Overlay", help="Enable Border Overlay", options="Yes,No", order=5 /> enable_border="Yes"; 
+	</ label="Background Image Scanline Overlay", help="Enable Background Image Scanline Overlay", options="Light, Medium, Dark, Diagonal, No", order=6 /> enable_backgroundoverlay="Light";
+	</ label="Background Music", help="Enable Background Music", options="Yes,No", order=6 /> enable_backgroundmusic="No";
+	</ label="Frame Around Video", help="Select frame option", options="Yes, No", order=7 /> enable_frame="No";
+	</ label="Enable Flyer Art", help="Enable Flyer Art", options="Yes,No", order=8 /> enable_bigart3="Yes";
+   	</ label="Clock", help="Enable Clock", options="Yes,No", order=8 /> enable_clock="Yes";
+	</ label="Left Wheel Image", help="Fade Out Left Wheel Image", options="Yes, Fade Out,No", order=8 /> LeftWheel="Yes" ;
+	</ label=" ", help="Brought to you by Project HyperPie", order=9 /> uct4=" ";
+	
+	</ label="WHEEL OPTIONS", help="Brought to you by Project HyperPie", order=10 /> uct5=" ";  
+	</ label="Wheel Layout", help="Select wheel type", options="List Box,Horizontal,Horizontal Animated,Vertical Wheel", order=11 /> enable_list_type="List Box";
+	</ label="Wheel Art Folder", help="The artwork to spin", options="wheel, marquee, flyer, fanart, cartart, boxart", order=12 /> orbit_art="wheel";
+	</ label="Wheel Transition Time", help="Time in milliseconds for wheel spin.", order=13 /> transition_ms="35";  
+	</ label="Wheel Fade Time", help="Time in milliseconds to fade the wheel.", options="Off,2500,5000,7500,10000,12500,15000,17500,20000,22500,25000,27500,30000", order=14 /> wheel_fade_ms="2500";
+   	</ label="Game List Rows", help="How many games to display on the List Box", options="11,13,15,17,19,21,23,25,27,29,31", order=15 /> rows="19"
+	</ label="Game List Auto Hide", help="Time in seconds after which game list hides\n0 disables auto hide and flyer. Default value is 1", option="0", order=16 /> glautohide="3";
+	</ label=" ", help="Brought to you by Project HyperPie", order=17 /> uct6=" ";
+
+	</ label="HARDWARE INFO OPTIONS", help="Show system information in layout", order=18 /> uct7=" ";
+	</ label="System Info", help="Show System Info - CPU, RAM etc.", options="Yes,No", order=19 /> showSysInfo="Yes";
+	</ label=" ", help="Brought to you by Project HyperPie", order=20 /> uct8=" ";
+   	
+	</ label="GAME/SYSTEM INFO", help="Show or hide system name", order=24 /> uct12=" ";
+    </ label="Title", help="Enable Title", options="Yes, No", order=25 /> enable_title="Yes";  
+	</ label="Fade Title", help="Fade out title", options="Yes, No", order=26 /> fadeWheelTitle="No";
+    </ label="Game Description", help="Select Game Description Text Mode", options="Right,Popup,Off", order=27 /> select_description="Off";
+	</ label=" ", help="Brought to you by Project HyperPie", order=28 /> uct13=" ";
+
+	</ label="COLOUR OPTIONS", help="Brought to you by Project HyperPie", order=29 /> uct14=" ";		  
+	</ label="Border Overlay Colour as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=30 /> bgrgb="0,0,0";
+	</ label="List Box Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=31 /> lbgrgb="153,0,0";
+	</ label="Video Frame Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of the frame.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=32 /> frrgb="250,250,250";
+	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=33 /> selrgb="255,255,0";
+	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=34 /> titrgb="255,255,0";
+	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=35 /> gslrgb="254,58,124";
+	</ label="Year and Manufacturer as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=36 /> pldrgb="254,255,255";
+	</ label=" ", help="Brought to you by Project HyperPie", order=37 /> uct15=" ";
+	
+	</ label="VIDEO OPTIONS", help="Brought to you by Project HyperPie", order=38 /> uct16=" ";  
+	</ label="Select Video Mode", help="Select Video Mode and Positon, Window or Off", options="Full Screen,Off,Center", order=39 /> videomode="Center";   
+	</ label="Preserve Video Aspect Ratio", help="Preserve Video Aspect Ratio", options="Yes,No", order=40 /> Preserve_Aspect_Ratio="Yes";
+	</ label="Enble Scanlines", help="Show scanline effect", options="None,Light,Medium,Dark", order=41 /> enable_scanline="None";
+	</ label=" ", help="Brought to you by Project HyperPie", order=42 /> uct17=" ";
+   
+	</ label="ANIMATED WHEEL EFFECTS", help="Show or hide additional images", order=43 /> uct18=" ";
+	</ label="Wheel Art Fade on Selection", help="Enable Wheel Art Fade on Selection", options="Yes,No", order=44 /> enable_wheelartfade="No";
+	</ label="Wheel Art Fade on Load", help="Enable Wheel Art Fade on Load", options="Yes,No", order=45 /> enable_wheelartfadeonload="No"; 
+	</ label="Wheel Art Scale on Selection", help="Disable Wheel Art Scale on Load", options="Yes,No", order=46 /> enable_wheelartscale="Yes"; 
+	</ label="Wheel Art Scale on Load", help="Disable Big Art Scale on Load", options="Yes,No", order=47 /> enable_wheelartscaleonload="No"; 
+	</ label="Wheel Art Rotate on Selection", help="Enable Wheel Art Rotate on Selection", options="Yes,No", order=48 /> enable_wheelartrotate="No";
+	</ label="Wheel Art Rotate on Load", help="Enable Wheel Art Rotate on Load", options="Yes,No", order=49 /> enable_wheelartrotateonload="No";	 
+	</ label="Wheel Art Fly-in on Selection", help="Enable Wheel Art Fly-in on Selection", options="Yes,No", order=50 /> enable_wheelartflyin="No";
+	</ label=" ", help="Brought to you by Project HyperPie", order=51 /> uct19=" ";
+
 }  
 
 // Check if the AM version supporting .nomargin property is running
@@ -246,7 +241,8 @@ if ( my_config["enable_bg"] == "Per Title")
 {
 local b_art = fe.add_image("backgrounds/[Title].png", 0, 0, flw, flh );
 b_art.alpha=255;
-}///////////////////
+}
+///////////////////
 // Background Art 
 /////////////////////
 
@@ -263,58 +259,367 @@ bgart.set_randomize_on_transition(true);
 bgart.set_start_scale(1.1);
 }
 
-if ( my_config["enable_bg"] == "Hursty HP2 Static") 
-{
-local b_art = fe.add_image("../../menu-art/fade-in/[Emulator]", 0, 0, flw, flh );
-b_art.alpha=255;
-}
-if ( my_config["enable_bg"] == "City Lights Slide") 
+if ( my_config["enable_bg"] == "City Lights") 
 {
 local bgflyerslide = fe.add_image("backgrounds/City Lights.png", 0, 0, flw, flh );
 local bgflyerslide2 = fe.add_clone(bgflyerslide);
 //Animation for image bg
-animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 28000, loop=true}));
-animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 28000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
 animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
 }
 
-if ( my_config["enable_bg"] == "Pixel Skyline Slide") 
+if ( my_config["enable_bg"] == "Pixel Skyline") 
 {
 local bgflyerslide = fe.add_image("backgrounds/Pixel Skyline.png", 0, 0, flw, flh );
 local bgflyerslide2 = fe.add_clone(bgflyerslide);
 //Animation for image bg
-animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 28000, loop=true}));
-animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 28000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
 animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
 }
 
-if ( my_config["enable_bg"] == "Black Logos Slide") 
+//Grid Logos
+if ( my_config["enable_bg"] == "Grid Logos Dark Blue") 
 {
-local bgflyerslide = fe.add_image("backgrounds/logos_black.png", 0, 0, flw, flh );
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Dark Blue.png", 0, 0, flw, flh );
 bgflyerslide.preserve_aspect_ratio = true;
 local bgflyerslide2 = fe.add_clone(bgflyerslide);
 bgflyerslide2.preserve_aspect_ratio = true;
 //Animation for image bg
-animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 28000, loop=true}));
-animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 28000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
 animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
-local bgflyerslide = fe.add_image("scanline2.png", 0, 0, flw, flh );
-}
 
-if ( my_config["enable_bg"] == "Blue Logos Slide") 
+}
+if ( my_config["enable_bg"] == "Grid Logos Dark Grey") 
 {
-local bgflyerslide = fe.add_image("backgrounds/logos_blue.png", 0, 0, flw, flh );
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Dark Grey.png", 0, 0, flw, flh );
 bgflyerslide.preserve_aspect_ratio = true;
 local bgflyerslide2 = fe.add_clone(bgflyerslide);
 bgflyerslide2.preserve_aspect_ratio = true;
 //Animation for image bg
-animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 28000, loop=true}));
-animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 28000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
 animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
-local bgflyerslide = fe.add_image("scanline2.png", 0, 0, flw, flh );
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Green") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Green.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Light Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Light Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Light Grey") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Light Grey.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Mid Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Mid Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Mid Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Mid Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Orange") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Orange.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Pink") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Pink.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Purple") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Purple.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Red") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Red.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Turquoise") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Turquoise.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Grid Logos Yellow") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Grid Logos/Grid Turquoise.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+//Logos
+if ( my_config["enable_bg"] == "Logos Dark Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Dark Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Dark Grey") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Dark Grey.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Green") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Green.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Light Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Light Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Light Grey") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Light Grey.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Light Turquoise") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Light Turquoise.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Mid Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Mid Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Orange") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Orange.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Pink") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Pink.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Purple") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Purple.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Red") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Red.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Turquoise") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Turquoise.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Logos Yellow") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Logos/Yellow.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+//Logos Mono
+if ( my_config["enable_bg"] == "Mono Logos Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Mono Logos/Mono Logo Blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+if ( my_config["enable_bg"] == "Mono Logos Black") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Mono Logos/Mono Logo Black.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
 }
 
-if ( my_config["enable_bg"] == "Neon Static") 
+if ( my_config["enable_bg"] == "Neon") 
 {
 local b_art = fe.add_image("backgrounds/Neon.jpg", 0, 0, flw, flh );
 b_art.alpha=255;
@@ -332,6 +637,29 @@ b_art.alpha=255;
 }
 **/
 
+
+if ( my_config["enable_backgroundoverlay"] == "Light" )
+{
+local scanline = fe.add_image( "scanline.png", 0, 0, flw, flh );
+scanline.preserve_aspect_ratio = false;
+scanline.alpha = 100;
+}
+if ( my_config["enable_backgroundoverlay"] == "Medium" )
+{
+local scanline = fe.add_image( "scanline.png", 0, 0, flw, flh );
+scanline.preserve_aspect_ratio = false;
+scanline.alpha = 200;
+}
+if ( my_config["enable_backgroundoverlay"] == "Dark" )
+{
+local scanline = fe.add_image( "scanline.png", 0, 0, flw, flh );
+scanline.preserve_aspect_ratio = false;
+scanline.alpha = 255;
+}
+if ( my_config["enable_backgroundoverlay"] == "Diagonal")
+{
+local bgflyerslide = fe.add_image("scanline2.png", 0, 0, flw, flh );
+}
 //Border
 if ( my_config["enable_border"] == "Yes") {
 // Snap Background
@@ -422,7 +750,7 @@ frame.preserve_aspect_ratio = true;
 
 
 //////////////////
-//Scanlines
+//Fullscreen Video Scanlines
 ///////////////////
 
 
@@ -543,272 +871,77 @@ local blah = PopUpImage();
 
 if ( my_config["select_description"] == "Off" ) {}
  
-//////////////////
-///Cart Art Animation
-//////////////////
 
-/////////////////////////////////////////////////////
-if ( my_config["enable_bigart"] == "Yes" ){
-local bigart = fe.add_artwork(( my_config["select_bigartfolder"] ), flx*0.1, fly*0.3, flw*0.14, flh*0.25);
-bigart.preserve_aspect_ratio = true;
-bigart.trigger = Transition.EndNavigation;
 
-local bigart_rotate_onload = {
-    when = When.StartLayout,
-    when = Transition.ToNewList,
-    property = "rotation",
-    start = 90,
-    end = 0,
-    time = 1500,
-    tween = Tween.Expo
-    loop=false
- }
 
-if ( my_config["enable_bigartrotateonload"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigart_rotate_onload ) );
+//////////////////////////////////////////////////
+//begin system info stuff (by Steve Sherrod)
+//////////////////////////////////////////////////
+
+local ii = 0;
+local rr = 0;
+
+// System info tick callback
+function update_sysinfo( tick_time )
+{
+	ii+= 1;
+	if (ii >= 300){
+		fe.plugin_command( "python", "/home/pi/.attract/layouts/system-info/system-info.py -i", "PluginSysInfoRet" );
+		 
+		ii = 0;
+	} 
 }
 
-local bigartscale_onload = {
-    when = When.StartLayout,
-    when = Transition.ToNewList,
-    property = "scale",
-    start = 1.2,
-    end = 1.0,
-    time = 1000	
-    tween = Tween.Quad,
-}
+local txtCpuTemp = fe.add_text( "0C", flw*0.82, flh*0.872, flw*0.18, flh*0.024 );
+local txtCpuSpeed = fe.add_text( "CPU Speed: ", flw*0.82, flh*0.892, flw*0.18, flh*0.024 )
+local txtTotalMem = fe.add_text( "Memory Usage: ", flw*0.82, flh*0.912, flw*0.18, flh*0.024 );
+local txtIPAddress = fe.add_text( "IP Address: ", flw*0.82, flh*0.932, flw*0.18, flh*0.024 );
+local txtUpTime = fe.add_text( "Uptime: ", flw*0.82, flh*0.952, flw*0.18, flh*0.024 );
 
-local bigartfade_onload = {
-    when = When.StartLayout,
-    when = Transition.ToNewList,
-	property = "alpha",
-	delay = 500
-	start = 0,
-	end = 255,
-	time = 500,
-	pulse = false
-	loop = false
- }
+txtCpuTemp.align = Align.Right;
+txtCpuSpeed.align = Align.Right;
+txtTotalMem.align = Align.Right;
+txtUpTime.align = Align.Right;
+txtIPAddress.align = Align.Right;
 
-if ( my_config["enable_bigartscaleonload"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartscale_onload ) );
-}
-if ( my_config["enable_bigartfadeonload"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartfade_onload ) );
-}
+// System info callback function
+local output="";
+function PluginSysInfoRet(StrRet)
+{
+	output += rstrip(StrRet) + "\n";
+	local substrings = split(output, "||");
 
-local bigartscale = {
-    when = Transition.EndNavigation,
-    property = "scale",
-    start = 1.2,
-    end = 1.0,
-    time = 500	
-    tween = Tween.Quad,
-	pulse = false
-//	delay = 500
+	local strPrefix = substrings[0];
 	
-}
-
-local bigartx = {
-    when = Transition.ToNewSelection,
-    property = "x",
-    start = flx*-0.1
-    end = flx*0.1
-    time = 1500,
-    tween = Tween.Expo
-	pulse = false
- }  
- 
-local bigartskew_x = {
-    when = Transition.ToNewSelection ,
-	property = "skew_x",
-	start = 255,
-    end = 0,
-	time = 1500,
-	loop = false
-	pulse = false
- } 
- 
-local bigartfade = {
-    when = Transition.ToNewSelection ,
-	property = "alpha",
-//	delay = 500
-	start = 0,
-	end = 255,
-	time = 500,
-	pulse = false
-	loop = false
- }
-local bigartrotate = {
-    when = Transition.ToNewSelection,
-    property = "rotation",
-    start = 90,
-    end = 0,
-    time = 1500,
-    tween = Tween.Expo
-    loop=false
- }
- 
-
-//Animation
-
-if ( my_config["enable_bigartrotate"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartrotate ) );
-}
-if ( my_config["enable_bigartscale"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartscale ) );
-}
-if ( my_config["enable_bigartflyin"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartx ) );
-animation.add( PropertyAnimation ( bigart, bigartskew_x ) );
-}
-if ( my_config["enable_bigartfade"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartfade ) );
-}
-}
-
-
-//////////////////////////////////////
-
-// CD art animation
-
-//////////////////////////////////////
-if ( my_config["enable_bigart"] == "Yes" ){
-local cdart = fe.add_artwork("cdart", flx*0.1, fly*0.3, flw*0.14, flh*0.25);
-cdart.preserve_aspect_ratio = true;
-
-local cdart_rotation = {
-when = Transition.ToNewSelection ,property = "rotation", start = 0, end = 360, time = 3000, loop = true
-}
-local cdart_rotationLoad = {
-when = When.StartLayout ,property = "rotation", start = 0, end = 360, time = 3000, loop = true
-}
-animation.add( PropertyAnimation ( cdart, cdart_rotation ) );
-animation.add( PropertyAnimation ( cdart, cdart_rotationLoad ) );
-}
-//Animation
-
-/////////////////////////////////////////////////////
-// Box Art Animation
-///////////////////////////////////////////////////////////////////////////
-if ( my_config["enable_bigart2"] == "Yes" ){
-local bigart = fe.add_artwork(( my_config["select_bigartfolder2"] ), flx*0.02, fly*0.24, flw*0.16, flh*0.36);
-bigart.preserve_aspect_ratio = true;
-bigart.trigger = Transition.EndNavigation;
-
-local bigart_rotate_onload = {
-    when = When.StartLayout,
-    when = Transition.ToNewList,
-    property = "rotation",
-    start = 90,
-    end = 0,
-    time = 1500,
-    tween = Tween.Expo
-    loop=false
- }
-
-if ( my_config["enable_bigartrotateonload2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigart_rotate_onload ) );
-}
-
-local bigartscale_onload = {
-    when = When.StartLayout,
-    when = Transition.ToNewList,
-    property = "scale",
-    start = 1.2,
-    end = 1.0,
-    time = 1000	
-    tween = Tween.Quad,
-}
-
-local bigartfade_onload = {
-    when = When.StartLayout,
-    when = Transition.ToNewList,
-	property = "alpha",
-	delay = 500
-	start = 0,
-	end = 255,
-	time = 500,
-	pulse = false
-	loop = false
- }
-
-if ( my_config["enable_bigartscaleonload2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartscale_onload ) );
-}
-if ( my_config["enable_bigartfadeonload2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartfade_onload ) );
-}
-
-local bigartscale = {
-    when = Transition.EndNavigation,
-    property = "scale",
-    start = 1.2,
-    end = 1.0,
-    time = 500	
-    tween = Tween.Quad,
-	pulse = false
-//	delay = 500
+	if (strPrefix == "sysinfo"){
+		txtCpuTemp.msg = "CPU Temp: " + substrings[4];
+		txtCpuSpeed.msg = "CPU Speed: " + substrings[6];
+		txtTotalMem.msg = "Memory Usage: " + substrings[13] + "\\" + substrings[12];
+		txtIPAddress.msg = "IP Address: " + substrings[7];
+		txtUpTime.msg = "Uptime: " + substrings[3];
+	}
 	
-}
+	output=""
+};
 
-local bigartx = {
-    when = Transition.ToNewSelection,
-    property = "x",
-    start = flx*1
-    end = flx*0.02
-    time = 1500,
-    tween = Tween.Expo
-	pulse = false
- }
- 
-local bigartskew_x = {
-    when = Transition.ToNewSelection ,
-	property = "skew_x",
-	start = 255,
-    end = 0,
-	time = 1500,
-	loop = false
-	pulse = false
- }
- 
-local bigartfade = {
-    when = Transition.ToNewSelection ,
-	property = "alpha",
-//	delay = 500
-	start = 0,
-	end = 255,
-	time = 500,
-	pulse = false
-	loop = false
- }
-local bigartrotate = {
-    when = Transition.ToNewSelection,
-    property = "rotation",
-    start = 90,
-    end = 0,
-    time = 1500,
-    tween = Tween.Expo
-    loop=false
- }
- 
- 
-//Animation
+if ( my_config["showSysInfo"] == "Yes" ){
+	fe.plugin_command( "python", "/home/pi/.attract/layouts/system-info/system-info.py -i", "PluginSysInfoRet" );
+	fe.add_ticks_callback(this, "update_sysinfo");
+} else {
 
-if ( my_config["enable_bigartrotate2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartrotate ) );
-}
-if ( my_config["enable_bigartscale2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartscale ) );
-}
-if ( my_config["enable_bigartflyin2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartx ) );
-animation.add( PropertyAnimation ( bigart, bigartskew_x ) );
-}
-if ( my_config["enable_bigartfade2"] == "Yes" ){
-animation.add( PropertyAnimation ( bigart, bigartfade ) );
-}
-}
+		txtCpuTemp.msg = "";
+		txtCpuSpeed.msg = "";
+		txtTotalMem.msg = "";
+		txtIPAddress.msg = "";
+		txtUpTime.msg = "";
+};
+
+/////////////////////////////////////////////////////////
+//end system info stuff
+/////////////////////////////////////////////////////////
+
+
+
 //////////////////////
 // Filters/Category
 //////////////////////
@@ -1744,6 +1877,7 @@ if ( my_config["fadeWheelTitle"] == "Yes" ){
 
 
 // Wheel Image
+if (( my_config["LeftWheel"] == "Yes")|| ( my_config["LeftWheel"] == "Fade Out" )){
 local wheelScale = ( flw - crw * 2 ) < flh ? flw - crw * 2 : flh
 local wheelImageW = floor( wheelScale * 0.3 )*0.9
 local wheelImageH = floor( wheelScale * 0.3 )*0.9
@@ -1751,8 +1885,32 @@ local wheelImage = fe.add_artwork( "wheel" ,flx + bbm, bth - floor( wheelImageH 
 wheelImage.preserve_aspect_ratio = true
 wheelImage.trigger = Transition.EndNavigation;
 
+local fadeLeftWheel = {
+    when = Transition.ToNewSelection,
+	property = "alpha",
+	start = 255,
+	end = 0,
+	time = 4000,
+	pulse = false
+	loop = false
+ } 
+ 
+ local fadeLeftWheelStart = {
+    when = Transition.StartLayout,
+	property = "alpha",
+	start = 255,
+	end = 0,
+	time = 4000,
+	pulse = false
+	loop = false
+ } 
+ 
 
-
+if ( my_config["LeftWheel"] == "Fade Out" ){
+	animation.add( PropertyAnimation ( wheelImage, fadeLeftWheel ) );
+	animation.add( PropertyAnimation ( wheelImage, fadeLeftWheelStart ) );
+	}
+}
 // List Entry
 local gameListEntryW = floor( bth * 2.5 )
 local gameListEntryH = floor( bth * 0.25 )
@@ -1851,12 +2009,23 @@ function on_transition( ttype, var, ttime ) {
 	}
 
 
-///////////
-//Character Image
-//////////
-if ( my_config["enable_characterimage"] == "Yes" ){
-	
-local characterimage = fe.add_image(( "characters/[DisplayName]"), flw*0.6, flh*0.65, flw*0.14, flh*0.15);
-characterimage.alpha=255;
-characterimage.preserve_aspect_ratio = true;	
+////////////////
+//Sound effects
+////////////
+function fade_transitions( ttype, var, ttime ) {
+ switch ( ttype ) {
+  case Transition.ToNewSelection:
+//  case Transition.ToNewList:
+	local Wheelclick = fe.add_sound("Click.mp3")
+	      Wheelclick.playing=true
+  break;
+  case Transition.ToGame:
+  case Transition.ToNewList:
+	local Wheelclick = fe.add_sound("selection.mp3")
+	      Wheelclick.playing=true
+  break;
+  }
+ return false;
 }
+
+fe.add_transition_callback( "fade_transitions" );
