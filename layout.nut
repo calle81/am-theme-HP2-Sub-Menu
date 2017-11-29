@@ -12,7 +12,7 @@ class UserConfig {
 	</ label=" ", help="Brought to you by Project HyperPie", order=2 /> uct2=" ";
 
 	</ label="GENERAL SETTINGS", help="Brought to you by Project HyperPie", order=3 /> uct3=" ";
-	</ label="Background Image", help="Select theme background", options="System Flyer Pan & Scan, City Lights, Pixel Skyline, Grid Logos Dark Blue, Grid Logos Dark Grey, Grid Logos Green, Grid Logos Light Blue, Grid Logos Light Grey, Grid Logos Mid Blue, Grid Logos Mid Blue, Grid Logos Orange, Grid Logos Pink, Grid Logos Purple, Grid Logos Red, Grid Logos Turquoise, Grid Logos Yellow, Logos Dark Blue, Logos Dark Grey, Logos Green, Logos Light Blue, Logos Light Grey, Logos Light Turquoise, Logos Mid Blue, Logos Orange, Logos Pink, Logos Purple, Logos Red, Logos Turquoise, Logos Yellow, Mono Logos Blue, Mono Logos Black, Neon, None", order=4 /> enable_bg="Logos Red";     
+	</ label="Background Image", help="Select theme background", options="Flyer, City Lights, Pixel Skyline, Grid Logos Dark Blue, Grid Logos Dark Grey, Grid Logos Green, Grid Logos Light Blue, Grid Logos Light Grey, Grid Logos Mid Blue, Grid Logos Mid Blue, Grid Logos Orange, Grid Logos Pink, Grid Logos Purple, Grid Logos Red, Grid Logos Turquoise, Grid Logos Yellow, Logos Dark Blue, Logos Dark Grey, Logos Green, Logos Light Blue, Logos Light Grey, Logos Light Turquoise, Logos Mid Blue, Logos Orange, Logos Pink, Logos Purple, Logos Red, Logos Turquoise, Logos Yellow, Mono Logos Blue, Mono Logos Black, Neon, None", order=4 /> enable_bg="Logos Red";     
 	</ label="Border Overlay", help="Enable Border Overlay", options="Yes,No", order=5 /> enable_border="Yes"; 
 	</ label="Background Image Scanline Overlay", help="Enable Background Image Scanline Overlay", options="Light, Medium, Dark, Diagonal, No", order=6 /> enable_backgroundoverlay="Light";
 	</ label="Background Music", help="Enable Background Music", options="Yes,No", order=6 /> enable_backgroundmusic="No";
@@ -190,63 +190,13 @@ local bgMusic = fe.add_sound("bgMusic.mp3")
 	bgMusic.loop=true
 }
 
-// Background Art 
-// This section will display the two different background art 
-// based up on the layout option choice
 
-if ( my_config["enable_bg"] == "Flyer")
-{
-local bgart = PanAndScanImage( "../../menu-art/flyer/[Title]", 0, 0, flw, flh);
-bgart.trigger = Transition.EndNavigation;
-bgart.preserve_aspect_ratio = false;
-bgart.set_fit_or_fill("fill");
-bgart.set_anchor(::Anchor.Center);
-bgart.set_zoom(4.5, 0.00008);
-bgart.set_animate(::AnimateType.Bounce, 0.50, 0.50)
-bgart.set_randomize_on_transition(true);
-bgart.set_start_scale(1.1);
 
-}
-
-if ( my_config["enable_bg"] == "City Lights") 
-{
-local b_art = fe.add_image("backgrounds/City Lights.png", 0, 0, flw, flh );
-b_art.alpha=255;
-}
-
-if ( my_config["enable_bg"] == "Pixel Skyline") 
-{
-local b_art = fe.add_image("backgrounds/Pixel Skyline.png", 0, 0, flw, flh );
-b_art.alpha=255;
-}
-
-if ( my_config["enable_bg"] == "Pixel Dojo") 
-{
-local b_art = fe.add_image("backgrounds/Pixel Dojo.png", 0, 0, flw, flh );
-b_art.alpha=255;
-}
-
-if ( my_config["enable_bg"] == "Neon") 
-{
-local b_art = fe.add_image("backgrounds/Neon.jpg", 0, 0, flw, flh );
-b_art.alpha=255;
-}
-
-if ( my_config["enable_bg"] == "Per System") 
-{
-local b_art = fe.add_image("backgrounds/[DisplayName]", 0, 0, flw, flh );
-b_art.alpha=255;
-}
-if ( my_config["enable_bg"] == "Per Title") 
-{
-local b_art = fe.add_image("backgrounds/[Title].png", 0, 0, flw, flh );
-b_art.alpha=255;
-}
 ///////////////////
 // Background Art 
 /////////////////////
 
-if ( my_config["enable_bg"] == "System Flyer Pan & Scan")
+if ( my_config["enable_bg"] == "Flyer")
 {
 local bgart = PanAndScanImage( "../../menu-art/flyer/[Title]", 0, 0, flw, flh);
 bgart.trigger = Transition.EndNavigation;
