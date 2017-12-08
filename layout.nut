@@ -835,7 +835,7 @@ local rr = 0;
 function update_sysinfo( tick_time )
 {
 	ii+= 1;
-	if (ii >= 300){
+	if (ii >= 3000){
 		fe.plugin_command( "python", "/home/pi/.attract/layouts/system-info/system-info.py -i", "PluginSysInfoRet" );
 		 
 		ii = 0;
