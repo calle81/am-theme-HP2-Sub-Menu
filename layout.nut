@@ -9,7 +9,8 @@
 
 class UserConfig {
 	</ label="HYPERPIE2 SUB MENU OPTIONS", help="Brought to you by Project HyperPie", order=1 /> uct1=" ";
-	</ label=" ", help="Brought to you by Project HyperPie", order=2 /> uct2=" ";
+	</ label="Warning! Dont change these options", help="Changing these options might break the oher views. Instead assign a button to Toggle Layout in the control options for predefined views", order=2 /> uct2="";
+	</ label=" ", help="Brought to you by Project HyperPie", order=2 /> uct100=" ";
 
 	</ label="GENERAL SETTINGS", help="Brought to you by Project HyperPie", order=3 /> uct3=" ";
 	</ label="Background Image", help="Select theme background", options="Flyer, City Lights, Pixel Skyline, Grid Logos Dark Blue, Grid Logos Dark Grey, Grid Logos Green, Grid Logos Light Blue, Grid Logos Light Grey, Grid Logos Mid Blue, Grid Logos Mid Blue, Grid Logos Orange, Grid Logos Pink, Grid Logos Purple, Grid Logos Red, Grid Logos Turquoise, Grid Logos Yellow, Logos Dark Blue, Logos Dark Grey, Logos Green, Logos Light Blue, Logos Light Grey, Logos Light Turquoise, Logos Mid Blue, Logos Orange, Logos Pink, Logos Purple, Logos Red, Logos Turquoise, Logos Yellow, Mono Logos Blue, Mono Logos Black, Neon, None", order=4 /> enable_bg="Logos Red";     
@@ -1902,11 +1903,12 @@ function on_transition( ttype, var, ttime ) {
 		update_artwork = true	
 		update_counter = 0
 
-		
+		if ( my_config["enable_list_type"] == "List Box" ){
 			gameListBoxAnimX.from = flw + flx - crw
 			gameListBoxAnimX.to = flw + flx - crw - lbw
 			gameListBoxBackgroundAnimX.from = flw + flx - crw
 			gameListBoxBackgroundAnimX.to = flw + flx - crw - lbw
+		}
 			categoryAnimX.from = categoryX + category.msg_width * 0.5 + categoryLeft.msg_width * 0.5 + categoryGap
 			categoryAnimX.to = categoryX
 			categoryRightAnimA.from = 0
@@ -1926,10 +1928,12 @@ function on_transition( ttype, var, ttime ) {
 		if ( glist_delay != 0 ) gameListBoxBackgroundAnimA.hide( 0, fe.layout.time )
 		
 		if ( var < 0 ) {
+			if ( my_config["enable_list_type"] == "List Box" ){
 			gameListBoxAnimX.from = flw + flx - crw
 			gameListBoxAnimX.to = flw + flx - crw - lbw
 			gameListBoxBackgroundAnimX.from = flw + flx - crw
 			gameListBoxBackgroundAnimX.to = flw + flx - crw - lbw
+			}
 			categoryAnimX.from = categoryX + category.msg_width * 0.5 + categoryLeft.msg_width * 0.5 + categoryGap
 			categoryAnimX.to = categoryX
 			categoryRightAnimA.from = 0
@@ -1941,10 +1945,12 @@ function on_transition( ttype, var, ttime ) {
 		}
 		
 		if ( var > 0 ) {
+			if ( my_config["enable_list_type"] == "List Box" ){
 			gameListBoxAnimX.from = flw + flx - crw
 			gameListBoxAnimX.to = flw + flx - crw - lbw
 			gameListBoxBackgroundAnimX.from = flw + flx - crw
 			gameListBoxBackgroundAnimX.to = flw + flx - crw - lbw
+			}
 			categoryAnimX.from = categoryX + category.msg_width * 0.5 + categoryLeft.msg_width * 0.5 + categoryGap
 			categoryAnimX.to = categoryX
 			categoryRightAnimA.from = 0
@@ -2003,7 +2009,7 @@ mbg = fe.add_image( "backgrounds/Logos/Red.png", 0, 0, fe.layout.width, fe.layou
 msystem = fe.add_image( "../../menu-art/flyer/[DisplayName]", flw*0.3, flh*0.5, flw*0.4, flh*0.4 ),
 mwhiteline = fe.add_image( "white.png", 0, flh*0.3, fe.layout.width, flh*0.15 ),
 mfliter = fe.add_text( "[DisplayName]", 0, flh*0.3, fe.layout.width, flh*0.1 ),
-mfliter2 = fe.add_text( "Default Layout", 0, flh*0.4, fe.layout.width, mfliter2H ),
+mfliter2 = fe.add_text( "Default View", 0, flh*0.4, fe.layout.width, mfliter2H ),
 }
 OBJECTS.mbg.alpha = 200;
 OBJECTS.mbg.preserve_aspect_ratio = true;
