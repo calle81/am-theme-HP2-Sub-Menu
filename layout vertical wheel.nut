@@ -12,86 +12,87 @@ class UserConfig {
 	</ label=" ", help="Brought to you by Project HyperPie", order=2 /> uct2=" ";
 	
 	</ label="GENERAL SETTINGS", help="Brought to you by Project HyperPie", order=3 /> uct3=" ";	
-	</ label="Background Image", help="Select theme background", options="Game Flyer, System Flyer, City Lights, Pixel Skyline, Grid Logos Dark Blue, Grid Logos Dark Grey, Grid Logos Green, Grid Logos Light Blue, Grid Logos Light Grey, Grid Logos Mid Blue, Grid Logos Mid Blue, Grid Logos Orange, Grid Logos Pink, Grid Logos Purple, Grid Logos Red, Grid Logos Turquoise, Grid Logos Yellow, Logos Dark Blue, Logos Dark Grey, Logos Green, Logos Light Blue, Logos Light Grey, Logos Light Turquoise, Logos Mid Blue, Logos Orange, Logos Pink, Logos Purple, Logos Red, Logos Turquoise, Logos Yellow, Mono Logos Blue, Mono Logos Black, Neon, None", order=4 /> enable_bg="Logos Red";	
-	</ label="Background Image Scanline Overlay", help="Enable Background Image Scanline Overlay", options="Light, Medium, Dark, Diagonal, No", order=5 /> enable_backgroundoverlay="Light"; 
-    </ label="Disable Video Sound", help="Disable Video Sound", options="Yes,No", order=6 /> enable_backgroundmusic="No";
-	</ label="Left Side Art", help="Enable Left Side Art", options="Yes,No", order=7 /> enable_leftart="Yes";
-   	</ label="Left Wheel Image", help="Fade Out Left Wheel Image", options="Yes, Fade Out,No", order=8 /> LeftWheel="Yes" ;
-	</ label="Border Overlay", help="Enable Border Overlay", options="Yes,No", order=9 /> enable_border="Yes"; 
-	</ label="Search Key", help="Choose the key to initiate a search", options="custom1,custom2,custom3,custom4,custom5,custom6,up,down,left,right", order=10 /> user_search_key="custom1";
-    </ label="Search Results", help="Choose the search method", options="show_results,next_match", order=11 /> user_search_method="show_results";
-	</ label="Title", help="Enable Title", options="Yes, No", order=12 /> enable_title="Yes";
-	</ label="Frame Around Video", help="Select frame option", options="Yes, No", order=13 /> enable_frame="No";
-	</ label="Enable Flyer Art", help="Enable Flyer Art", options="Yes,No", order=14 /> enable_bigart3="Yes";
-   	</ label="Clock", help="Enable Clock", options="Yes,No", order=15 /> enable_clock="Yes";
-	</ label="Enable System Image", help="Enable System Image Art", options="Yes,No", order=16 /> enable_systemimage="No";
+	</ label="Background Image", help="Select theme background", options="Custom JPG, Custom PNG,Flyer, City Lights, Pixel Skyline,Neon Logos White, Neon Logos Cyan, Neon Logos Blue,  Neon Logos Light Blue, Neon Logos Pink,Grid Logos Dark Blue, Grid Logos Dark Grey, Grid Logos Green, Grid Logos Light Blue, Grid Logos Light Grey, Grid Logos Mid Blue, Grid Logos Mid Blue, Grid Logos Orange, Grid Logos Pink, Grid Logos Purple, Grid Logos Red, Grid Logos Turquoise, Grid Logos Yellow, Logos Dark Blue, Logos Dark Grey, Logos Green, Logos Light Blue, Logos Light Grey, Logos Light Turquoise, Logos Mid Blue, Logos Orange, Logos Pink, Logos Purple, Logos Red, Logos Turquoise, Logos Yellow, Mono Logos Blue, Mono Logos Black, None", order=4 /> enable_bg="";	
+	</ label="Background Image Scanline Overlay", help="Enable Background Image Scanline Overlay", options="Light, Medium, Dark, Diagonal, No", order=5 /> enable_backgroundoverlay=""; 
+    </ label="Disable Video Sound", help="Disable Video Sound", options="Yes,No", order=6 /> enable_backgroundmusic="";
+	</ label="Left Side Art", help="Enable Left Side Art", options="Yes,No", order=7 /> enable_leftart="";
+   	</ label="Left Wheel Image", help="Fade Out Left Wheel Image", options="Yes, Fade Out,No", order=8 /> LeftWheel="" ;
+	</ label="Border Overlay", help="Enable Border Overlay", options="Yes,No", order=9 /> enable_border=""; 
+	</ label="Search Key", help="Choose the key to initiate a search", options="custom1,custom2,custom3,custom4,custom5,custom6,up,down,left,right", order=10 /> user_search_key="";
+    </ label="Search Results", help="Choose the search method", options="show_results,next_match", order=11 /> user_search_method="";
+	</ label="Title", help="Enable Title", options="Yes, No", order=12 /> enable_title="";
+	</ label="Frame Around Video", help="Select frame option", options="Yes, No", order=13 /> enable_frame="";
+	</ label="Enable Flyer Art", help="Enable Flyer Art", options="Yes,No", order=14 /> enable_bigart3="";
+   	</ label="Clock", help="Enable Clock", options="Yes,No", order=15 /> enable_clock="";
+	</ label="Enable System Image", help="Enable System Image Art", options="Yes,No", order=16 /> enable_systemimage="";
+	</ label="Art Load Delay", help="Delay Loading of snaps and flyer to optimize performance", options="On,Off", order=8 /> art_delay="" ;
 	</ label=" ", help="Brought to you by Project HyperPie", order=17 /> uct4=" ";
 
 
 	</ label="WHEEL OPTIONS", help="Brought to you by Project HyperPie", order=18 /> uct5=" ";   
 	</ label="Wheel Layout", help="Select wheel type", options="List Box,Horizontal,Horizontal Animated,Vertical Wheel", order=19 /> enable_list_vertical="Vertical Wheel";
-	</ label="Wheel Art Folder", help="The artwork to spin", options="wheel, marquee, flyer, fanart, cartart, boxart", order=20 /> orbit_art="wheel";
-	</ label="Wheel Transition Time", help="Time in milliseconds for wheel spin.", order=21 /> transition_ms="35";  
-	</ label="Wheel Fade Time", help="Time in milliseconds to fade the wheel.", options="Off,2500,5000,7500,10000,12500,15000,17500,20000,22500,25000,27500,30000", order=22 /> wheel_fade_ms="2500";
-   	</ label="Game List Rows", help="How many games to display on the List Box", options="11,13,15,17,19,21,23,25,27,29,31", order=23 /> rows="19"
-	</ label="Game List Auto Hide", help="Time in seconds after which game list hides\n0 disables auto hide and flyer. Default value is 1", option="0", order=24 /> glautohide="3"	
+	</ label="Wheel Art Folder", help="The artwork to spin", options="wheel, marquee, flyer, fanart, cartart, boxart", order=20 /> orbit_art="";
+	</ label="Wheel Transition Time", help="Time in milliseconds for wheel spin.", order=21 /> transition_ms="";  
+	</ label="Wheel Fade Time", help="Time in milliseconds to fade the wheel.", options="Off,2500,5000,7500,10000,12500,15000,17500,20000,22500,25000,27500,30000", order=22 /> wheel_fade_ms="";
+   	</ label="Game List Rows", help="How many games to display on the List Box", options="11,13,15,17,19,21,23,25,27,29,31", order=23 /> rows=""
+	</ label="Game List Auto Hide", help="Time in seconds after which game list hides\n0 disables auto hide and flyer. Default value is 1", option="0", order=24 /> glautohide=""	
 	</ label=" ", help="Brought to you by Project HyperPie", order=25 /> uct6=" ";	
 	
 	</ label="GAME/SYSTEM INFO", help="Show or hide system name", order=26 /> uct7=" ";
-	</ label="Fade System/Game Title", help="Show System and Category Name", options="Yes, No", order=27 /> fadeWheelTitle="No";
-	</ label="Select Game Description Text Mode", help="Select Game Description Text Mode", options="Right,Popup,Off", order=28 /> select_description="Off";
+	</ label="Fade System/Game Title", help="Show System and Category Name", options="Yes, No", order=27 /> fadeWheelTitle="";
+	</ label="Select Game Description Text Mode", help="Select Game Description Text Mode", options="Right,Popup,Off", order=28 /> select_description="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=29 /> uct8=" ";	
 
 	</ label="COLOUR OPTIONS", help="Brought to you by Project HyperPie", order=29 /> uct14=" ";		  
-	</ label="Border Overlay Colour as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=30 /> bgrgb="0,0,0";
-	</ label="List Box Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=31 /> lbgrgb="153,0,0";
-	</ label="Video Frame Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of the frame.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=32 /> frrgb="250,250,250";
-	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=33 /> selrgb="255,255,0";
-	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=34 /> titrgb="255,255,0";
-	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=35 /> gslrgb="254,58,124";
-	</ label="Year and Manufacturer as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=36 /> pldrgb="254,255,255";
+	</ label="Border Overlay Colour as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=30 /> bgrgb="";
+	</ label="List Box Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=31 /> lbgrgb="";
+	</ label="Video Frame Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of the frame.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=32 /> frrgb="";
+	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=33 /> selrgb="";
+	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=34 /> titrgb="";
+	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=35 /> gslrgb="";
+	</ label="Year and Manufacturer as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=36 /> pldrgb="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=37 /> uct15=" ";
 	
 	</ label="VIDEO OPTIONS", help="Brought to you by Project HyperPie", order=40 /> uct11=" ";  
-	</ label="Video Mode", help="Select Video Mode and Positon, Window or Off", options="Full Screen,Off,Center", order=41 /> videomode="Center";
-	</ label="Preserve Video Aspect Ratio", help="Preserve Video Aspect Ratio", options="Yes,No", order=42 /> Preserve_Aspect_Ratio="Yes";
-	</ label="Scanlines", help="Show scanline effect", options="None,Light,Medium,Dark", order=43 /> enable_scanline="None";
+	</ label="Video Mode", help="Select Video Mode and Positon, Window or Off", options="Full Screen,Off,Center", order=41 /> videomode="";
+	</ label="Preserve Video Aspect Ratio", help="Preserve Video Aspect Ratio", options="Yes,No", order=42 /> Preserve_Aspect_Ratio="";
+	</ label="Scanlines", help="Show scanline effect", options="None,Light,Medium,Dark", order=43 /> enable_scanline="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=44 /> uct12=" ";   
    
 
 	</ label="ANIMATED WHEEL EFFECTS", help="Show or hide additional images", order=45 /> uct13=" ";
-	</ label="Enable Wheel Art Fade on Selection", help="Enable Wheel Art Fade on Selection", options="Yes,No", order=46 /> enable_wheelartfade="No";
-	</ label="Enable Wheel Art Fade on Load", help="Enable Wheel Art Fade on Load", options="Yes,No", order=47 /> enable_wheelartfadeonload="No"; 
-	</ label="Enable Wheel Art Scale on Selection", help="Disable Wheel Art Scale on Load", options="Yes,No", order=48 /> enable_wheelartscale="Yes"; 
-	</ label="Enable Wheel Art Scale on Load", help="Disable Big Art Scale on Load", options="Yes,No", order=49 /> enable_wheelartscaleonload="No"; 
-	</ label="Enable Wheel Art Rotate on Selection", help="Enable Wheel Art Rotate on Selection", options="Yes,No", order=50 /> enable_wheelartrotate="No";
-	</ label="Enable Wheel Art Rotate on Load", help="Enable Wheel Art Rotate on Load", options="Yes,No", order=51 /> enable_wheelartrotateonload="No";	 
-	</ label="Enable Wheel Art Fly-in on Selection", help="Enable Wheel Art Fly-in on Selection", options="Yes,No", order=52 /> enable_wheelartflyin="No";
+	</ label="Enable Wheel Art Fade on Selection", help="Enable Wheel Art Fade on Selection", options="Yes,No", order=46 /> enable_wheelartfade="";
+	</ label="Enable Wheel Art Fade on Load", help="Enable Wheel Art Fade on Load", options="Yes,No", order=47 /> enable_wheelartfadeonload=""; 
+	</ label="Enable Wheel Art Scale on Selection", help="Disable Wheel Art Scale on Load", options="Yes,No", order=48 /> enable_wheelartscale=""; 
+	</ label="Enable Wheel Art Scale on Load", help="Disable Big Art Scale on Load", options="Yes,No", order=49 /> enable_wheelartscaleonload=""; 
+	</ label="Enable Wheel Art Rotate on Selection", help="Enable Wheel Art Rotate on Selection", options="Yes,No", order=50 /> enable_wheelartrotate="";
+	</ label="Enable Wheel Art Rotate on Load", help="Enable Wheel Art Rotate on Load", options="Yes,No", order=51 /> enable_wheelartrotateonload="";	 
+	</ label="Enable Wheel Art Fly-in on Selection", help="Enable Wheel Art Fly-in on Selection", options="Yes,No", order=52 /> enable_wheelartflyin="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=53 /> uct14=" ";   	
    
 	  
  </ label="CART ART OPTIONS", help="Show or hide additional images", order=54 /> uct15=" "
-   </ label="Enable Cart Art", help="Enable Cart Art", options="Yes,No", order=55 /> enable_bigart="No";
-   </ label="Select Cart Art Folder", help="Select Cart Art Folder", options="wheel, marquee, flyer, fanart, boxart, cartart", order=56 /> select_bigartfolder="cartart";
-   </ label="Enable Cart Art Fade on Selection", help="Enable Cart Art Fade on Selection", options="Yes,No", order=57 /> enable_bigartfade="No";
-   </ label="Enable Cart Art Fade on Load", help="Enable Cart Art Fade on Load", options="Yes,No", order=58 /> enable_bigartfadeonload="No"; 
-   </ label="Enable Cart Art Scale on Selection", help="Enable Cart Art Scale on Selection", options="Yes,No", order=59 /> enable_bigartscale="No"; 
-   </ label="Enable Cart Art Scale on Load", help="Enable Cart Art Scale on Load", options="Yes,No", order=60 /> enable_bigartscaleonload="No"; 
-   </ label="Enable Cart Art Rotate on Selection", help="Enable Cart Art Rotate on Selection", options="Yes,No", order=61 /> enable_bigartrotate="No";
-   </ label="Enable Cart Art Rotate on Load", help="Enable Cart Art Rotate on Load", options="Yes,No", order=62 /> enable_bigartrotateonload="No";	 
-   </ label="Enable Cart Art Fly-in on Selection", help="Enable Cart Art Fly-in on Selection", options="Yes,No", order=63 /> enable_bigartflyin="No";
+   </ label="Enable Cart Art", help="Enable Cart Art", options="Yes,No", order=55 /> enable_bigart="";
+   </ label="Select Cart Art Folder", help="Select Cart Art Folder", options="wheel, marquee, flyer, fanart, boxart, cartart", order=56 /> select_bigartfolder="";
+   </ label="Enable Cart Art Fade on Selection", help="Enable Cart Art Fade on Selection", options="Yes,No", order=57 /> enable_bigartfade="";
+   </ label="Enable Cart Art Fade on Load", help="Enable Cart Art Fade on Load", options="Yes,No", order=58 /> enable_bigartfadeonload=""; 
+   </ label="Enable Cart Art Scale on Selection", help="Enable Cart Art Scale on Selection", options="Yes,No", order=59 /> enable_bigartscale=""; 
+   </ label="Enable Cart Art Scale on Load", help="Enable Cart Art Scale on Load", options="Yes,No", order=60 /> enable_bigartscaleonload=""; 
+   </ label="Enable Cart Art Rotate on Selection", help="Enable Cart Art Rotate on Selection", options="Yes,No", order=61 /> enable_bigartrotate="";
+   </ label="Enable Cart Art Rotate on Load", help="Enable Cart Art Rotate on Load", options="Yes,No", order=62 /> enable_bigartrotateonload="";	 
+   </ label="Enable Cart Art Fly-in on Selection", help="Enable Cart Art Fly-in on Selection", options="Yes,No", order=63 /> enable_bigartflyin="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=64 /> uct16=" ";      
    
 </ label="BOX ART OPTIONS", help="Show or hide additional images", order=65 /> uct17=" ";
-   </ label="Enable Box Art", help="Enable Box Art", options="Yes,No", order=66 /> enable_bigart2="No";
-   </ label="Select Box Art Foldert", help="Select Box Art Folder", options="wheel, marquee, flyer, fanart, boxart, cartart", order=67 /> select_bigartfolder2="boxart";
-   </ label="Enable Box Art Fade on Selection", help="Enable Box Wheel Art Fade on Selection", options="Yes,No", order=68 /> enable_bigartfade2="No";
-   </ label="Enable Box Art Fade on Load", help="Enable Box Art Fade on Load", options="Yes,No", order=69 /> enable_bigartfadeonload2="No"; 
-   </ label="Enable Box Art Scale on Selection", help="Enable Box Art Scale on Selection", options="Yes,No", order=70 /> enable_bigartscale2="No"; 
-   </ label="Enable Box Art Scale on Load", help="Enable Box Art Scale on Load", options="Yes,No", order=71 /> enable_bigartscaleonload2="No"; 
-   </ label="Enable Box Art Rotate on Selection", help="Enable Box Art Rotate on Selection", options="Yes,No", order=72 /> enable_bigartrotate2="No";
-   </ label="Enable Box Art Rotate on Load", help="Enable Box Art Rotate on Load", options="Yes,No", order=73 /> enable_bigartrotateonload2="No";
-   </ label="Enable Box Art Fly-in on Selection", help="Enable Box Art Fly-in on Selection", options="Yes,No", order=74 /> enable_bigartflyin2="No";
+   </ label="Enable Box Art", help="Enable Box Art", options="Yes,No", order=66 /> enable_bigart2="";
+   </ label="Select Box Art Foldert", help="Select Box Art Folder", options="wheel, marquee, flyer, fanart, boxart, cartart", order=67 /> select_bigartfolder2="";
+   </ label="Enable Box Art Fade on Selection", help="Enable Box Wheel Art Fade on Selection", options="Yes,No", order=68 /> enable_bigartfade2="";
+   </ label="Enable Box Art Fade on Load", help="Enable Box Art Fade on Load", options="Yes,No", order=69 /> enable_bigartfadeonload2=""; 
+   </ label="Enable Box Art Scale on Selection", help="Enable Box Art Scale on Selection", options="Yes,No", order=70 /> enable_bigartscale2=""; 
+   </ label="Enable Box Art Scale on Load", help="Enable Box Art Scale on Load", options="Yes,No", order=71 /> enable_bigartscaleonload2=""; 
+   </ label="Enable Box Art Rotate on Selection", help="Enable Box Art Rotate on Selection", options="Yes,No", order=72 /> enable_bigartrotate2="";
+   </ label="Enable Box Art Rotate on Load", help="Enable Box Art Rotate on Load", options="Yes,No", order=73 /> enable_bigartrotateonload2="";
+   </ label="Enable Box Art Fly-in on Selection", help="Enable Box Art Fly-in on Selection", options="Yes,No", order=74 /> enable_bigartflyin2="";
    
 }  
 
@@ -105,7 +106,7 @@ am_version_check.visible = false
 // modules
 fe.load_module("fade");
 fe.load_module( "animate");
-fe.load_module( "pan-and-scan" );
+fe.load_module( "pan-and-scan-hp" );
 fe.do_nut("nuts/ryb2rgb.nut")
 fe.do_nut("nuts/animate.nut")
 fe.do_nut("nuts/genre.nut")
@@ -216,32 +217,28 @@ try {	wheel_fade_ms = my_config["wheel_fade_ms"].tointeger(); } catch ( e ) { }
 ///////////////////
 // Background Art 
 /////////////////////
-
-if ( my_config["enable_bg"] == "System Flyer" || my_config["enable_bg"] == "Game Flyer")
+if ( my_config["enable_bg"] == "Custom JPG") 
 {
-local bgart = PanAndScanImage( "../../menu-art/flyer/[DisplayName]", 0, 0, flw, flh);
-//bgart.trigger = Transition.EndNavigation;
-bgart.preserve_aspect_ratio = true;
+local bgflyerslide = fe.add_image("backgrounds/custom.jpg", 0, 0, flw, flh );
+}
+
+if ( my_config["enable_bg"] == "Custom PNG") 
+{
+local bgflyerslide = fe.add_image("backgrounds/custom.png", 0, 0, flw, flh );
+}
+if ( my_config["enable_bg"] == "Flyer")
+{
+local bgart = PanAndScanImage( "../../menu-art/flyer/[Title]", 0, 0, flw, flh);
+bgart.trigger = Transition.EndNavigation;
+bgart.preserve_aspect_ratio = false;
 bgart.set_fit_or_fill("fill");
 bgart.set_anchor(::Anchor.Center);
 bgart.set_zoom(4.5, 0.00008);
 bgart.set_animate(::AnimateType.Bounce, 0.50, 0.50)
-bgart.set_randomize_on_transition(false);
+bgart.set_randomize_on_transition(true);
 bgart.set_start_scale(1.1);
+}
 
-if ( my_config["enable_bg"] == "Game Flyer Pan & Scan")
-{
-local bgart2 = PanAndScanArt( "flyer", 0, 0, flw, flh);
-bgart.trigger = Transition.EndNavigation;
-bgart2.preserve_aspect_ratio = true;
-bgart2.set_fit_or_fill("fill");
-bgart2.set_anchor(::Anchor.Center);
-bgart2.set_zoom(4.5, 0.00008);
-bgart2.set_animate(::AnimateType.Bounce, 0.50, 0.50)
-bgart2.set_randomize_on_transition(false);
-bgart2.set_start_scale(1.1);
-}
-}
 if ( my_config["enable_bg"] == "City Lights") 
 {
 local bgflyerslide = fe.add_image("backgrounds/City Lights.png", 0, 0, flw, flh );
@@ -602,10 +599,69 @@ animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout,
 
 }
 
-if ( my_config["enable_bg"] == "Neon") 
+if ( my_config["enable_bg"] == "Neon Logos White") 
 {
-local b_art = fe.add_image("backgrounds/Neon.jpg", 0, 0, flw, flh );
-b_art.alpha=255;
+local bgflyerslide = fe.add_image("backgrounds/Neon Logos/neon white.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+
+if ( my_config["enable_bg"] == "Neon Logos Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Neon Logos/neon blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+
+if ( my_config["enable_bg"] == "Neon Logos Light Blue") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Neon Logos/neon light blue.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+
+if ( my_config["enable_bg"] == "Neon Logos Pink") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Neon Logos/neon pink.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
+}
+
+if ( my_config["enable_bg"] == "Neon Logos Cyan") 
+{
+local bgflyerslide = fe.add_image("backgrounds/Neon Logos/neon cyan.png", 0, 0, flw, flh );
+bgflyerslide.preserve_aspect_ratio = true;
+local bgflyerslide2 = fe.add_clone(bgflyerslide);
+bgflyerslide2.preserve_aspect_ratio = true;
+//Animation for image bg
+animation.add( PropertyAnimation( bgflyerslide, {when = Transition.StartLayout, property = "x", start = 0, end = -flw, time = 50000, loop=true}));
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "x", start = flw, end = 0, time = 50000, loop=true}));			
+animation.add( PropertyAnimation( bgflyerslide2, {when = Transition.StartLayout, property = "alpha", start = 0, end = 255, time = 500}));
+
 }
 /**
 if ( my_config["enable_bg"] == "Per System") 
@@ -648,52 +704,60 @@ local bgflyerslide = fe.add_image("scanline2.png", 0, 0, flw, flh );
 /////////////////////
 //Video
 /////////////////////
+//Frame
+if ( my_config["enable_frame"] == "Yes") {
+local framebg = fe.add_image("black.png", flx*0.035, fly*0.167, flw*0.65, flh*0.67);
+framebg.preserve_aspect_ratio = true;
+}
 
 if ( my_config["videomode"] == "Center") {
+		if ( my_config["art_delay"] == "On") {
 local last_nav = 0;
 local gtime = 0;
-local art_flag = false;
+local art_flag = true;
 
-local video = fe.add_image( fe.get_art("snap"),flx*0.035, fly*0.155, flw*0.65, flh*0.7 );  //Use add_image so the snap doesn't auto-update while navigating
-
+local video = fe.add_image( fe.get_art("snap"),flx * 0.035, fly * 0.155, flw * 0.65, flh * 0.7 );  //Use add_image so the snap doesn't auto-update while navigating
 if ( my_config["enable_backgroundmusic"] == "Yes") {
 local bgMusic = fe.add_sound("bgMusic.mp3")
 video.video_flags = Vid.NoAudio;
 }
-
-video.preserve_aspect_ratio = true;
 fe.add_transition_callback( "my_transition" );
-video.preserve_aspect_ratio = true;
 function my_transition( ttype, var, ttime )
 {
-	if ( ttype == Transition.ToNewSelection )
-	{
-		last_nav = gtime;
-		art_flag = true;
-	}
+    if ( ttype == Transition.FromOldSelection || Transition.ToNewList )
+    {
+        last_nav = gtime;
+        art_flag = true;
+        video.video_playing = false
+    }
 }
 
 fe.add_ticks_callback( this, "on_tick" );
 function on_tick( ttime )
 {
     gtime = ttime;
-	if (art_flag && (ttime - last_nav > 1000))  //800ms delay
-	{
-		video.file_name = fe.get_art("snap");		
-		art_flag = false;
-
-	}
-
+    if (art_flag && (ttime - last_nav > 500))  //400ms delay
+    {
+        video.file_name = fe.get_art("snap");
+        art_flag = false;
+        video.video_playing = true
+    }
+    if ( video.video_playing == false && video.preserve_aspect_ratio == false)
+        video.preserve_aspect_ratio = true
 }
 }
+}
 
-/*****
+
 if ( my_config["videomode"] == "Center") {
-local snap = FadeArt( "snap", flx*0.12, fly*0.18, flw*0.65, flh*0.65)
+	if ( my_config["art_delay"] == "Off") {
+local snap = FadeArt( "snap", flx * 0.035, fly * 0.155, flw * 0.65, flh * 0.7 );
 snap.trigger = Transition.EndNavigation;
 snap.preserve_aspect_ratio = true;
+	}
 }
-*****/
+
+
 if ( my_config["videomode"] == "Full Screen") {
 local snap = FadeArt( "snap", 0, 0, flw, flh );
 snap.trigger = Transition.EndNavigation;
@@ -704,7 +768,7 @@ snap.preserve_aspect_ratio = true;
 }
 //Frame
 if ( my_config["enable_frame"] == "Yes") {
-local frame = fe.add_image("frame.png", flx*0.2, fly*0.18, flw*0.49, flh*0.65)
+local frame = fe.add_image("frame.png", flx*0.035, fly*0.167, flw*0.65, flh*0.67);
 frame.set_rgb( frRGB[0], frRGB[1], frRGB[2] )
 frame.preserve_aspect_ratio = true;
 }
@@ -739,7 +803,12 @@ scanline.alpha = 255;
 ///Flyer Art Animation
 //////////////////
 
+
+
+
+
 if ( my_config["enable_bigart3"] == "Yes" )
+			if ( my_config["art_delay"] == "On") {
 {
 local last_flyernav = 0;
 local gflyertime = 0;
@@ -747,15 +816,15 @@ local flyer_flag = false;
 local flx = ( fe.layout.width - layout_width ) / 2
 local fly = ( fe.layout.height - layout_height ) / 2
 local flyer = fe.add_image( fe.get_art("flyer"),flw + flx - crw - flyerW, bth, flyerW, flyerH );  //Use add_image so the snap doesn't auto-update while navigating
-flyer.preserve_aspect_ratio = true;
+
 fe.add_transition_callback( "my_flyertransition" );
-flyer.preserve_aspect_ratio = true;
 function my_flyertransition( ttype, var, ttime )
 {
-	if ( ttype == Transition.ToNewSelection )
+    if ( ttype == Transition.FromOldSelection || Transition.ToNewList )
 	{
 		last_flyernav = gflyertime;
 		flyer_flag = true;
+		flyer.video_playing = false
 	}
 }
 
@@ -767,10 +836,20 @@ function on_flyertick( ttime )
 	{
 		flyer.file_name = fe.get_art("flyer");		
 		flyer_flag = false;
+		flyer.video_playing = false
 
 	}
-
+if ( flyer.video_playing == false && flyer.preserve_aspect_ratio == false)
+        flyer.preserve_aspect_ratio = true
 }
+}
+}
+
+if ( my_config["enable_bigart3"] == "Yes" )
+			if ( my_config["art_delay"] == "Off") {
+local flx = ( fe.layout.width - layout_width ) / 2
+local fly = ( fe.layout.height - layout_height ) / 2
+local flyer = FadeArt("flyer",flw + flx - crw - flyerW, bth, flyerW, flyerH );
 }
 local flx = fe.layout.width;
 local fly = fe.layout.height;
@@ -1169,7 +1248,7 @@ wheelOverlay.alpha = 200;
 	start = 200,
 	end = 0,
 	time = 1,
-	delay = 2700,
+	delay = 1500,
 	pulse = false
 	loop = false
  } 
@@ -1179,7 +1258,7 @@ wheelOverlay.alpha = 200;
 	property = "alpha",
 	start = 200,
 	end = 0,
-	time = 1000,
+	time = 1500,
 	pulse = false
 	loop = false
  } 
@@ -1215,124 +1294,7 @@ local fly = fe.layout.height;
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // The following section sets up what type and wheel and displays the users choice
 
-if ( my_config["enable_list_vertical"] != "List Box" ){
-//Low horizontal
 
-if ( my_config["enable_list_vertical"] == "Horizontal" )
-{
-fe.load_module( "conveyor" );
-local wheel_x = [ -flx*0.45, -flx*0.3, -flx*0.2, -flx*0.04, flx*0.12 flx*0.28, flx*0.44, flx*0.6, flx*0.76 flx*0.92, flx*1.08, flx*1.24 ];
-local wheel_y = [ fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, ]; 
-local wheel_w = [ flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, ];
-local wheel_a = [  255,  255,  255,  255,  255,  255, 255,  255,  255,  255,  255,  255, ];
-local wheel_h = [  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2, flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2, ];
-local wheel_r = [  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ];
-local num_arts = 12;
-
-class WheelEntry extends ConveyorSlot
-{
-	constructor()
-	{
-		base.constructor( ::fe.add_artwork( my_config["orbit_art"] ) );
-	}
-
-	function on_progress( progress, var )
-	{
-	  local p = progress / 0.1;
-		local slot = p.tointeger();
-		p -= slot;
-		
-		slot++;
-
-		if ( slot < 0 ) slot=0;
-		if ( slot >=10 ) slot=10;
-
-		m_obj.x = wheel_x[slot] + p * ( wheel_x[slot+1] - wheel_x[slot] );
-		m_obj.y = wheel_y[slot] + p * ( wheel_y[slot+1] - wheel_y[slot] );
-		m_obj.width = wheel_w[slot] + p * ( wheel_w[slot+1] - wheel_w[slot] );
-		m_obj.height = wheel_h[slot] + p * ( wheel_h[slot+1] - wheel_h[slot] );
-		m_obj.rotation = wheel_r[slot] + p * ( wheel_r[slot+1] - wheel_r[slot] );
-		m_obj.alpha = wheel_a[slot] + p * ( wheel_a[slot+1] - wheel_a[slot] );
-	}
-};
-
-local wheel_entries = [];
-for ( local i=0; i<num_arts/2; i++ )
-	wheel_entries.push( WheelEntry() );
-
-local remaining = num_arts - wheel_entries.len();
-
-// we do it this way so that the last wheelentry created is the Center one showing the current
-// selection (putting it at the top of the draw order)
-for ( local i=0; i<remaining; i++ )
-	wheel_entries.insert( num_arts/2, WheelEntry() );
-
-conveyor <- Conveyor();
-conveyor.set_slots( wheel_entries );
-conveyor.transition_ms = 50;
-try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch ( e ) { }
-
-}
-//Low horizontal Animated
-if ( my_config["enable_list_vertical"] == "Horizontal Animated" )
-{
-
-fe.load_module( "conveyor" );
-local wheel_x = [ -flx*0.45, -flx*0.3, -flx*0.2, -flx*0.04, flx*0.12 flx*0.28, flx*0.44, flx*0.6, flx*0.76 flx*0.92, flx*1.08, flx*1.24 ];
-local wheel_y = [ fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, fly*0.82, ]; 
-local wheel_w = [ flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, flw*0.12, ];
-local wheel_a = [  255,  255,  255,  255,  255,  255, 0,  255,  255,  255,  255,  255, ];
-local wheel_h = [  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2, flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2,  flh*0.2, ];
-local wheel_r = [  0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, ];
-local num_arts = 12;
-
-
-
-class WheelEntry extends ConveyorSlot
-{
-	constructor()
-	{
-		base.constructor( ::fe.add_artwork( my_config["orbit_art"] ) );
-	}
-
-	function on_progress( progress, var )
-	{
-	  local p = progress / 0.1;
-		local slot = p.tointeger();
-		p -= slot;
-		
-		slot++;
-
-		if ( slot < 0 ) slot=0;
-		if ( slot >=10 ) slot=10;
-
-		m_obj.x = wheel_x[slot] + p * ( wheel_x[slot+1] - wheel_x[slot] );
-		m_obj.y = wheel_y[slot] + p * ( wheel_y[slot+1] - wheel_y[slot] );
-		m_obj.width = wheel_w[slot] + p * ( wheel_w[slot+1] - wheel_w[slot] );
-		m_obj.height = wheel_h[slot] + p * ( wheel_h[slot+1] - wheel_h[slot] );
-		m_obj.rotation = wheel_r[slot] + p * ( wheel_r[slot+1] - wheel_r[slot] );
-		m_obj.alpha = wheel_a[slot] + p * ( wheel_a[slot+1] - wheel_a[slot] );
-	}
-};
-
-local wheel_entries = [];
-for ( local i=0; i<num_arts/2; i++ )
-	wheel_entries.push( WheelEntry() );
-
-local remaining = num_arts - wheel_entries.len();
-
-// we do it this way so that the last wheelentry created is the Center one showing the current
-// selection (putting it at the top of the draw order)
-for ( local i=0; i<remaining; i++ )
-	wheel_entries.insert( num_arts/2, WheelEntry() );
-
-conveyor <- Conveyor();
-conveyor.set_slots( wheel_entries );
-conveyor.transition_ms = 50;
-try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch ( e ) { }
-
-}
- 
  //This enables vertical art instead of default wheel
  
 { 
@@ -1340,7 +1302,8 @@ try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch (
 //property animation - wheel pointers
 
 
-local point = fe.add_image("pointer.png", flx*0.89, fly*0.34, flw*0.2, flh*0.35);
+local point = fe.add_image("pointer.png", flx*0.905, fly*0.34, flw*0.2, flh*0.35);
+point.set_rgb( gslRGB[0], gslRGB[1], gslRGB[2] )
 
 local alpha_cfg = {
     when = Transition.ToNewSelection,
@@ -1357,7 +1320,7 @@ local alphaendnav_cfg = {
 	start = 200,
 	end = 0,
 	time = 1,
-	delay = 2700,
+	delay = 1500,
 	pulse = false
 	loop = false
 }
@@ -1368,18 +1331,18 @@ local alphaload_cfg = {
     property = "alpha",
     start = 255,
     end = 0,
-    time = 1000
+    time = 1500
 }
 animation.add( PropertyAnimation( point, alphaload_cfg ) );
 
 local movex_cfg = {
     when = Transition.ToNewSelection,
     property = "x",
-    start = flx*0.885,
+    start = flx*0.9,
     end = point.x,
     time = 200	
 }	
-//animation.add( PropertyAnimation( point, movex_cfg ) );
+animation.add( PropertyAnimation( point, movex_cfg ) );
 } 
 if ( my_config["enable_list_vertical"] == "Vertical Wheel" )
 {
@@ -1438,7 +1401,6 @@ try { conveyor.transition_ms = my_config["transition_ms"].tointeger(); } catch (
 
 }
 conveyor.preserve_aspect_ratio = true;
-}
 
 ////////////////////////////////////////////////////////////////////////////
 ///
@@ -2211,15 +2173,15 @@ local mfliter2W = (flw - crw - bbm - floor( bbh * 2.875 ))
 local mfliter2H = floor( bbh * 0.15 )
 
  ::OBJECTS <- {
-mbg = fe.add_image( "backgrounds/Logos/Red.png", 0, 0, fe.layout.width, fe.layout.height ),
-msystem = fe.add_image( "../../menu-art/flyer/[DisplayName]", flw*0.3, flh*0.5, flw*0.4, flh*0.4 ),
+//mbg = fe.add_image( "backgrounds/Logos/Red.png", 0, 0, fe.layout.width, fe.layout.height ),
+//msystem = fe.add_image( "../../menu-art/flyer/[DisplayName]", flw*0.3, flh*0.5, flw*0.4, flh*0.4 ),
 mwhiteline = fe.add_image( "white.png", 0, flh*0.3, fe.layout.width, flh*0.15 ),
 mfliter = fe.add_text( "[DisplayName]", 0, flh*0.3, fe.layout.width, flh*0.1 ),
 mfliter2 = fe.add_text( "Vertical Wheel View", 0, flh*0.4, fe.layout.width, mfliter2H ),
 }
-OBJECTS.mbg.alpha = 200;
-OBJECTS.mbg.preserve_aspect_ratio = true;
-OBJECTS.msystem.preserve_aspect_ratio = true;
+//OBJECTS.mbg.alpha = 200;
+//OBJECTS.mbg.preserve_aspect_ratio = true;
+//OBJECTS.msystem.preserve_aspect_ratio = true;
 OBJECTS.mwhiteline.set_rgb( bgRGB[0], bgRGB[1], bgRGB[2] )
 OBJECTS.mfliter.align = Align.Centre;
 OBJECTS.mfliter.set_rgb(titRGB[0],titRGB[1],titRGB[2])
@@ -2235,36 +2197,32 @@ OBJECTS.mfliter2.font = flh <= 600 ? "BebasNeueRegular.otf": "BebasNeueBook.otf"
 }
 
  local moveout_mbg = {
-    when = Transition.StartLayout ,property = "alpha", start = 255, end = 0, time = 700, delay = 1000
+    when = Transition.StartLayout ,property = "alpha", start = 255, end = 0, time = 1000, delay = 2000
 }
 
  local movein_msysfliter = {
-   when =  Transition.StartLayout, property = "alpha", start = 50, end = 255, time = 1000
+   when =  Transition.StartLayout, property = "alpha", start = 50, end = 255, time = 2000
 }
 
  local moveout_msysfliter = {
-    when = Transition.StartLayout ,property = "alpha", start = 255, end = 0, time = 700, delay = 1000
+    when = Transition.StartLayout ,property = "alpha", start = 255, end = 0, time = 1000, delay = 2000
 }
 
 
  local movein_mwhiteline = {
-   when =  Transition.StartLayout, property = "alpha", start = 50, end = 150, time = 1000
+   when =  Transition.StartLayout, property = "alpha", start = 50, end = 250, time = 2000
 }
 
  local moveout_mwhiteline = {
-    when = Transition.StartLayout ,property = "alpha", start = 150, end = 0, time = 700, delay = 1000
+    when = Transition.StartLayout ,property = "alpha", start = 150, end = 0, time = 1000, delay = 2000
 }
-animation.add( PropertyAnimation( OBJECTS.mbg, movein_mbg ) );
-animation.add( PropertyAnimation( OBJECTS.mbg, moveout_mbg ) );
-animation.add( PropertyAnimation( OBJECTS.msystem, movein_msysfliter ) );
-animation.add( PropertyAnimation( OBJECTS.msystem, moveout_msysfliter ) );
+//animation.add( PropertyAnimation( OBJECTS.mbg, movein_mbg ) );
+//animation.add( PropertyAnimation( OBJECTS.mbg, moveout_mbg ) );
+//animation.add( PropertyAnimation( OBJECTS.msystem, movein_msysfliter ) );
+//animation.add( PropertyAnimation( OBJECTS.msystem, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mwhiteline,  movein_mwhiteline ) );
 animation.add( PropertyAnimation( OBJECTS.mwhiteline,  moveout_mwhiteline) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, moveout_msysfliter ) );
-//
-// Fade_in Module
-//
-fe.load_module("fade_in.nut");
