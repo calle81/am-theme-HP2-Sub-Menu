@@ -25,6 +25,7 @@ class UserConfig </ help="Navigation controls: Up/Down (to move up and down) and
 	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=34 /> titrgb="";
 	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=35 /> gslrgb="";
 	</ label="Year and Manufacturer as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=36 /> pldrgb="";
+	</ label="View Name Popup", help="Disable or enable view name popup", options="On,Off", order=37 /> ViewNamePopup="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=37 /> uct15=" ";
 
 
@@ -666,6 +667,7 @@ function nameyear(offset) {
 class Grid extends Conveyor
 {
 	snap_t=null;
+	snap_bg=null;
 	frame=null;
 	fav_t=null;
 	name_t=null;	
@@ -703,8 +705,12 @@ class Grid extends Conveyor
         set_slots(slots, get_sel()); //set grid slots
 
 	//Setup Art
-        snap_t = fe.add_artwork("snap", 700, 55, 300, 300);
+	snap_bg = frame = fe.add_image("black.png", 700, 55, 300, 300);
+	snap_bg.trigger = Transition.EndNavigation;
+    snap_t = fe.add_artwork("snap", 700, 55, 300, 300);
 	snap_t.trigger = Transition.EndNavigation;
+	snap_t.preserve_aspect_ratio = true;
+
 
     frame = fe.add_image("frame2.png", width * 2, height * 2, width - 6, height - 17);
 	frame.set_rgb (gslRGB[0],gslRGB[1],gslRGB[2])
@@ -794,6 +800,10 @@ class Grid extends Conveyor
 		snap_t.x = width * sel_x + 10;
 		snap_t.y = fe.layout.height / 19 + height * sel_y;
 		animation.add( PropertyAnimation( snap_t,         {when = Transition.EndNavigation, property = "alpha", start = 0, end = 255, time = 1000}));
+		
+		snap_bg.x = width * sel_x + 10;
+		snap_bg.y = fe.layout.height / 19 + height * sel_y;
+		animation.add( PropertyAnimation( snap_bg,         {when = Transition.EndNavigation, property = "alpha", start = 0, end = 255, time = 1000}));
 
 		frame.x = width * sel_x + 3;
 		frame.y = fe.layout.height / 23 + height * sel_y;
@@ -801,6 +811,7 @@ class Grid extends Conveyor
 				
 		local newoffset = get_sel() - selection_index;
 		snap_t.index_offset = newoffset;
+		snap_bg.index_offset = newoffset;
 		fav_t.index_offset = newoffset;
 		name_t.index_offset = newoffset;
 		list.index_offset = newoffset;
@@ -977,12 +988,14 @@ class Grid extends Conveyor
 		{
 		case Transition.EndNavigation:			
 			snap_t.visible = true;
+			snap_bg.visible = true;
 			frame.visible = true;
 			selsound_enabled = true;							
 		break;
 
 		case Transition.ToNewSelection:
 			snap_t.visible = false;
+			snap_bg.visible = false;
 			frame.visible = false;
 			selsound_enabled = false;
 		break;
@@ -1121,7 +1134,7 @@ function fade_transitions( ttype, var, ttime ) {
 fe.add_transition_callback( "fade_transitions" );
 
 //View name
-
+if ( my_config["ViewNamePopup"] == "On" ){
 local layout_width = fe.layout.width
 local layout_height = fe.layout.height
 local flx = ( fe.layout.width - layout_width ) / 2
@@ -1186,5 +1199,5 @@ animation.add( PropertyAnimation( OBJECTS.mfliter, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, moveout_msysfliter ) );
-
+}
 

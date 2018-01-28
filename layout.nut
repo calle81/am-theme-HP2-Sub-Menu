@@ -9,7 +9,7 @@
 
 class UserConfig {
 	</ label="HYPERPIE2 SUB MENU OPTIONS", help="Brought to you by Project HyperPie", order=1 /> uct1=" ";
-	</ label="Warning! Dont change these options", help="Changing these options might break the oher views. Instead assign a button to Toggle Layout in the control options for predefined views", order=2 /> uct2="";
+//	</ label="Warning! Dont change these options", help="Changing these options might break the oher views. Instead assign a button to Toggle Layout in the control options for predefined views", order=2 /> uct2="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=2 /> uct100=" ";
 
 	</ label="GENERAL SETTINGS", help="Brought to you by Project HyperPie", order=3 /> uct3=" ";
@@ -19,15 +19,16 @@ class UserConfig {
     </ label="Disable Video Sound", help="Disable Video Sound", options="Yes,No", order=6 /> enable_backgroundmusic="No";
 	</ label="Frame Around Video", help="Select frame option", options="Yes, No", order=7 /> enable_frame="Yes";
 	</ label="Enable Flyer Art", help="Enable Flyer Art", options="Yes,No", order=8 /> enable_bigart3="Yes";
-   	</ label="Clock", help="Enable Clock", options="Yes,No", order=8 /> enable_clock="Yes";
+   	</ label="Clock", help="Enable Clock", options="Yes,No", order=8 /> enable_clock="No";
 	</ label="Left Wheel Image", help="Fade Out Left Wheel Image", options="Yes, Fade Out,No", order=8 /> LeftWheel="Yes" ;
-	</ label="Art Load Delay", help="Delay Loading of snaps and flyer to optimize performance", options="On,Off", order=8 /> art_delay="On" ;
+	</ label="Art Load Delay", help="Delay Loading of snaps and flyer to optimize performance", options="On,Off", order=8 /> art_delay="Off" ;
+	</ label="View Name Popup", help="Disable or enable view name popup", options="On,Off", order=8 /> ViewNamePopup="On";
 	</ label=" ", help="Brought to you by Project HyperPie", order=9 /> uct4=" ";
 	
 	</ label="WHEEL OPTIONS", help="Brought to you by Project HyperPie", order=10 /> uct5=" ";  
 	</ label="Wheel Layout", help="Select wheel type", options="List Box,Horizontal,Horizontal Animated,Vertical Wheel", order=11 /> enable_list_type="List Box";
 	</ label="Wheel Art Folder", help="The artwork to spin", options="wheel, marquee, flyer, fanart, cartart, boxart", order=12 /> orbit_art="wheel";
-	</ label="Wheel Transition Time", help="Time in milliseconds for wheel spin.", order=13 /> transition_ms="35";  
+	</ label="Wheel Transition Time", help="Time in milliseconds for wheel spin.", order=13 /> transition_ms="100";  
 	</ label="Wheel Fade Time", help="Time in milliseconds to fade the wheel.", options="Off,2500,5000,7500,10000,12500,15000,17500,20000,22500,25000,27500,30000", order=14 /> wheel_fade_ms="2500";
    	</ label="Game List Rows", help="How many games to display on the List Box", options="11,13,15,17,19,21,23,25,27,29,31", order=15 /> rows="19"
 	</ label="Game List Auto Hide", help="Time in seconds after which game list hides\n0 disables auto hide and flyer. Default value is 1", option="0", order=16 /> glautohide="3";
@@ -41,16 +42,16 @@ class UserConfig {
 	</ label="GAME/SYSTEM INFO", help="Show or hide system name", order=24 /> uct12=" ";
     </ label="Title", help="Enable Title", options="Yes, No", order=25 /> enable_title="Yes";  
 	</ label="Fade Title", help="Fade out title", options="Yes, No", order=26 /> fadeWheelTitle="No";
-    </ label="Game Description", help="Select Game Description Text Mode", options="Right,Popup,Off", order=27 /> select_description="Off";
+    </ label="Game Description", help="Select Game Description Text Mode", options="On,Off", order=27 /> select_description="Off";
 	</ label=" ", help="Brought to you by Project HyperPie", order=28 /> uct13=" ";
 
 	</ label="COLOUR OPTIONS", help="Brought to you by Project HyperPie", order=29 /> uct14=" ";		  
 	</ label="Border Overlay Colour as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=30 /> bgrgb="0,0,0";
 	</ label="List Box Background Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of background elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=31 /> lbgrgb="0,0,30";
 	</ label="Video Frame Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of the frame.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=32 /> frrgb="250,250,250";
-	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=33 /> selrgb="255,255,0";
-	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=34 /> titrgb="255,255,0";
-	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=35 /> gslrgb="254,58,124";
+	</ label="Category text color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=33 /> selrgb="255,255,255";
+	</ label="Title color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=34 /> titrgb="255,255,255";
+	</ label="Game Selection Bar Color as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=35 /> gslrgb="0,102,102";
 	</ label="Year and Manufacturer as R,G,B", help="( 0-255 values allowed )\nSets the colour of accent elements.\nLeave blank if you want the colour from the randomized to be stored permanently.", option="0", order=36 /> pldrgb="254,255,255";
 	</ label=" ", help="Brought to you by Project HyperPie", order=37 /> uct15=" ";
 	
@@ -854,6 +855,7 @@ if ( my_config["enable_bigart3"] == "Yes" )
 local flx = ( fe.layout.width - layout_width ) / 2
 local fly = ( fe.layout.height - layout_height ) / 2
 local flyer = FadeArt("flyer",flw + flx - crw - flyerW, bth, flyerW, flyerH );
+//flyer.preserve_aspect_ratio = true
 }
 local flx = fe.layout.width;
 local fly = fe.layout.height;
@@ -863,59 +865,48 @@ local fly = fe.layout.height;
 /////////////////
 //Game Description
 ////////////////
-if ( my_config["select_description"] == "Right" ) {
-local gtext = fe.add_text("[Overview]", flx*0.77, fly*0.2, flw*0.20, flh*0.24 );
-gtext.set_rgb( 255, 255, 255 );
-gtext.align = Align.Left;
-gtext.charsize = 25;
-gtext.rotation = 0;
-gtext.word_wrap = true;
+if ( my_config["select_description"] == "On" ){
+local image_bg = fe.add_image( "white.png", flx*0.719, bth, lbw, (flh - bth - bbh) ); 
+
+image_bg.set_rgb(bgRGB[0],bgRGB[1],bgRGB[2])
+image_bg.alpha = 150;
+image_bg.visible=true;
+
+local text = fe.add_text("info", flx*0.72, fly*0.13, flw*0.26, flh*0.7);
+text.font = "AEH.ttf"
+text.charsize = flx*0.01;
+text.align = Align.Left;
+text.word_wrap = true;
+text.alpha = 255;
+text.visible=true;
+
+fe.add_transition_callback("on_infotransition")
+
+function on_infotransition(ttype, var, ttime) {
+    if ( ttype == Transition.EndNavigation)
+        text.msg = fe.game_info(Info.Overview)
+	if ( ttype == Transition.StartLayout)
+        text.msg = fe.game_info(Info.Overview)
+	if ( ttype == Transition.ToNewList)
+        text.msg = fe.game_info(Info.Overview)
 }
 
-/////////
-if ( my_config["select_description"] == "Popup" ) {
-class PopUpImage
-{
-_my_image_bg=null;
-_my_text=null;
+fe.add_signal_handler(this, "on_signalinfo");
+function on_signalinfo(signal) {
+	if ( signal == "custom2" ){
+		if ( image_bg.visible==true ) {
+			image_bg.visible=false;
+			text.visible=false;
 
-constructor()
-{
-_my_image_bg = fe.add_image( "white.png", flx*0.715, bth, lbw*0.9, (flh - bth - bbh)*0.7 ); 
-_my_image_bg.set_rgb(bgRGB[0],bgRGB[1],bgRGB[2])
-_my_image_bg.visible=false;
-_my_image_bg.alpha = 180;
-
-_my_text = fe.add_text("[Overview]", flx*0.715, bth, lbw, flh - bth - bbh );
-_my_text.visible=false;
-_my_text.charsize = 22;
-//_my_text.set_rgb( 69, 69, 69 );
-_my_text.align = Align.Left;
-_my_text.word_wrap = true;
-_my_text.alpha = 255;
-//_my_text.style = Style.Bold;
-//_my_text.alpha= 100;
-
-fe.add_signal_handler( this, "on_signal" )
-}
-
-
-function on_signal( signal )
-{
-if ( signal == "custom1" )
-{
-_my_image_bg.visible=!_my_image_bg.visible;
-_my_text.visible=_my_image_bg.visible;
-return true;
-}
-return false;
+		} else {
+			image_bg.visible=true;
+			text.visible=true;
+		}
+		return true;
+	}
+	return false;
 }
 }
-local blah = PopUpImage();
-}
-
-
-if ( my_config["select_description"] == "Off" ) {}
  
 
 
@@ -1741,15 +1732,15 @@ gameListBox.y += floor( ( gameListBox.height - ( floor( gameListBox.height / gam
 
 
 // Game Listbox Animations
-local gameListBoxAnimX = Animate( gameListBox, "x", 4, glist_delay, 0.88 )
-local gameListBoxAnimA = Animate( gameListBox, "listbox_alpha", 1, glist_delay, 0.88 )
-local gameListBoxBackgroundAnimX = Animate( gameListBoxBackground, "x", 4, glist_delay, 0.88 )
-local gameListBoxBackgroundAnimA = Animate( gameListBoxBackground, "bg_alpha", 1, glist_delay, 0.88 )
+local gameListBoxAnimX = Animate( gameListBox, "x", 4, glist_delay, 0.4 )
+local gameListBoxAnimA = Animate( gameListBox, "listbox_alpha", 1, glist_delay, 0.4 )
+local gameListBoxBackgroundAnimX = Animate( gameListBoxBackground, "x", 4, glist_delay, 0.4 )
+local gameListBoxBackgroundAnimA = Animate( gameListBoxBackground, "bg_alpha", 1, glist_delay, 0.4 )
 if ( glist_delay == 0 ) {
 	gameListBoxAnimX.to = flw + flx - crw - lbw
 	gameListBoxBackgroundAnimX.to = flw + flx - crw - lbw
-	gameListBoxAnimA.to = 200
-	gameListBoxBackgroundAnimA.to = 200
+	gameListBoxAnimA.to = 255
+	gameListBoxBackgroundAnimA.to = 255
 }
 
 
@@ -2095,7 +2086,7 @@ function fade_transitions( ttype, var, ttime ) {
 fe.add_transition_callback( "fade_transitions" );
 
 //View name
-
+if ( my_config["ViewNamePopup"] == "On" ){
 local mfliter2W = (flw - crw - bbm - floor( bbh * 2.875 ))
 local mfliter2H = floor( bbh * 0.15 )
 
@@ -2155,4 +2146,4 @@ animation.add( PropertyAnimation( OBJECTS.mfliter, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, moveout_msysfliter ) );
-
+}

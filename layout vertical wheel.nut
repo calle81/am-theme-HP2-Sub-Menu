@@ -26,6 +26,7 @@ class UserConfig {
    	</ label="Clock", help="Enable Clock", options="Yes,No", order=15 /> enable_clock="";
 	</ label="Enable System Image", help="Enable System Image Art", options="Yes,No", order=16 /> enable_systemimage="";
 	</ label="Art Load Delay", help="Delay Loading of snaps and flyer to optimize performance", options="On,Off", order=8 /> art_delay="" ;
+	</ label="View Name Popup", help="Disable or enable view name popup", options="On,Off", order=8 /> ViewNamePopup="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=17 /> uct4=" ";
 
 
@@ -40,7 +41,7 @@ class UserConfig {
 	
 	</ label="GAME/SYSTEM INFO", help="Show or hide system name", order=26 /> uct7=" ";
 	</ label="Fade System/Game Title", help="Show System and Category Name", options="Yes, No", order=27 /> fadeWheelTitle="";
-	</ label="Select Game Description Text Mode", help="Select Game Description Text Mode", options="Right,Popup,Off", order=28 /> select_description="";
+	</ label="Select Game Description Text Mode", help="Select Game Description Text Mode", options="On,Off", order=28 /> select_description="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=29 /> uct8=" ";	
 
 	</ label="COLOUR OPTIONS", help="Brought to you by Project HyperPie", order=29 /> uct14=" ";		  
@@ -850,6 +851,7 @@ if ( my_config["enable_bigart3"] == "Yes" )
 local flx = ( fe.layout.width - layout_width ) / 2
 local fly = ( fe.layout.height - layout_height ) / 2
 local flyer = FadeArt("flyer",flw + flx - crw - flyerW, bth, flyerW, flyerH );
+flyer.preserve_aspect_ratio = true
 }
 local flx = fe.layout.width;
 local fly = fe.layout.height;
@@ -857,54 +859,47 @@ local fly = fe.layout.height;
 /////////////////
 //Game Description
 ////////////////
+if ( my_config["select_description"] == "On" ){
+local image_bg = fe.add_image( "white.png", flx*0.719, bth, lbw, (flh - bth - bbh) ); 
 
-// Class to assign the history.dat information
-// to a text object called ".currom"
+image_bg.set_rgb(bgRGB[0],bgRGB[1],bgRGB[2])
+image_bg.alpha = 150;
+image_bg.visible=true;
 
-	function get_hisinfo(offset) 
-	{ 
-		local sys = split( fe.game_info( Info.System,offset ), ";" );
-		local rom = fe.game_info( Info.Name,offset );
-		local text = ""; 
-		local currom = "";
+local text = fe.add_text("info", flx*0.72, fly*0.13, flw*0.26, flh*0.7);
+text.font = "AEH.ttf"
+text.charsize = flx*0.01;
+text.align = Align.Left;
+text.word_wrap = true;
+text.alpha = 255;
+text.visible=true;
 
-		// 
-		// we only go to the trouble of loading the entry if 
-		// it is not already currently loaded 
-		// 
-		
-		local alt = fe.game_info( Info.AltRomname,offset );
-		local cloneof = fe.game_info( Info.CloneOf,offset );
-		local lookup = get_history_offset( sys, rom, alt, cloneof );
-		
-		if ( lookup >= 0 ) 
-		{ 
+fe.add_transition_callback("on_infotransition")
 
-			text = get_history_entry( lookup, my_config );
- 			local index = text.find("- TECHNICAL -");
-			if (index >= 0)
-			{	
-				local tempa = text.slice(0, index);
-				text = strip(tempa);
-			} 
-		
-	 
-		} else { 
-			if ( lookup == -2 ) 
-				text = "Index file not found.  Try generating an index from the history.dat plug-in configuration menu.";
-			else 
-				text = "No Information available for:  " + rom; 
-		}  
-		return text;
+function on_infotransition(ttype, var, ttime) {
+    if ( ttype == Transition.EndNavigation)
+        text.msg = fe.game_info(Info.Overview)
+	if ( ttype == Transition.StartLayout)
+        text.msg = fe.game_info(Info.Overview)
+	if ( ttype == Transition.ToNewList)
+        text.msg = fe.game_info(Info.Overview)
+}
+
+fe.add_signal_handler(this, "on_signalinfo");
+function on_signalinfo(signal) {
+	if ( signal == "custom2" ){
+		if ( image_bg.visible==true ) {
+			image_bg.visible=false;
+			text.visible=false;
+
+		} else {
+			image_bg.visible=true;
+			text.visible=true;
+		}
+		return true;
 	}
-
-if ( my_config["select_description"] == "Right" ) {
-local gtext = fe.add_text("[Overview]", flx*0.77, fly*0.2, flw*0.20, flh*0.24 );
-gtext.set_rgb( 255, 255, 255 );
-gtext.align = Align.Left;
-gtext.charsize = 25;
-gtext.rotation = 0;
-gtext.word_wrap = true;
+	return false;
+}
 }
 
 /////////
@@ -2031,7 +2026,7 @@ local categoryRight2AnimA = Animate( categoryRight2, "alpha", categoryOvershot, 
 local gameListEntryW = floor( bth * 2.5 )
 local gameListEntryH = floor( bth * 0.25 )
 local gameListEntryY = floor( bth / 2.0 ) - floor( gameListEntryH / 2 )
-local gameListEntry = fe.add_text("[ListEntry]/[ListSize]", flx + flw - crw - gameListEntryW, gameListEntryY , gameListEntryW, gameListEntryH )
+local gameListEntry = fe.add_text("[ListEntry]/[ListSize]", (flx + flw - crw - gameListEntryW)*0.8, gameListEntryY , gameListEntryW, gameListEntryH )
 gameListEntry.align = Align.Right
 gameListEntry.style = Style.Regular
 gameListEntry.font = "BebasNeueLight.otf"
@@ -2123,28 +2118,6 @@ function on_transition( ttype, var, ttime ) {
 	}
 
 
-	//Display current time
-if ( my_config["enable_clock"] == "Yes" ){
-  local dt = fe.add_text( "", flw*0.65, flh*0.03, flw*0.3, flh*0.095 );
-dt.align = Align.Centre
-dt.filter_offset = 1
-//dt.set_rgb(selRGB[0],selRGB[1],selRGB[2])
-dt.style = Style.Regular
-dt.charsize = floor(category.height * 1000/701)
-dt.font = "BebasNeueBook.otf"
-
-  local clock = fe.add_image ("clock.png",flw*0.73, flh*0.042, flw*0.040, flh*0.06);
-  clock.alpha = 255;
-  clock.preserve_aspect_ratio = true;
-//  clock.set_rgb(titRGB[0],titRGB[1],titRGB[2])
-
-function update_clock( ttime ){
-  local now = date();
-  dt.msg = format("%02d", now.hour) + ":" + format("%02d", now.min );
-}
-  fe.add_ticks_callback( this, "update_clock" );
-}
-
 
 ////////////////
 //Sound effects
@@ -2168,7 +2141,7 @@ function fade_transitions( ttype, var, ttime ) {
 fe.add_transition_callback( "fade_transitions" );
 
 //View name
-
+if ( my_config["ViewNamePopup"] == "On" ){
 local mfliter2W = (flw - crw - bbm - floor( bbh * 2.875 ))
 local mfliter2H = floor( bbh * 0.15 )
 
@@ -2226,3 +2199,4 @@ animation.add( PropertyAnimation( OBJECTS.mfliter, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, moveout_msysfliter ) );
+}

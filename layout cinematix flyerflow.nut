@@ -21,6 +21,7 @@ class UserConfig {
    	</ label="Clock", help="Enable Clock", options="Yes,No", order=8 /> enable_clockCinematix="No";
 	</ label="Left Wheel Image", help="Fade Out Left Wheel Image", options="Yes, Fade Out,No", order=8 /> LeftWheelCinematix="Fade Out" ;
 	</ label="Art Load Delay", help="Delay Loading of snaps and flyer to optimize performance", options="On,Off", order=8 /> art_delay="" ;
+	</ label="View Name Popup", help="Disable or enable view name popup", options="On,Off", order=8 /> ViewNamePopup="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=9 /> uct4=" ";
 	
 	</ label="WHEEL OPTIONS", help="Brought to you by Project HyperPie", order=10 /> uct5=" ";  
@@ -462,6 +463,41 @@ local categoryRight2AnimA = Animate( categoryRight2, "alpha", categoryOvershot, 
 local flx = fe.layout.width;
 local fly = fe.layout.height;
 
+local CategoryFade = {
+    when = Transition.ToNewSelection,
+	property = "alpha",
+	start = 255,
+	end = 0,
+	time = 4000,
+	pulse = false
+	loop = false
+ } 
+ 
+
+ local CategoryFadeStart = {
+    when = Transition.StartLayout,
+	property = "alpha",
+	start = 255,
+	end = 0,
+	time = 4000,
+	pulse = false
+	loop = false
+ } 
+ 
+
+if ( my_config["fadeWheelTitleCinematix"] == "Yes" ){
+	animation.add( PropertyAnimation ( category, CategoryFade ) );
+	animation.add( PropertyAnimation ( categoryLeft, CategoryFade ) );
+//	animation.add( PropertyAnimation ( categoryLeft2, CategoryFade ) );
+	animation.add( PropertyAnimation ( categoryRight, CategoryFade ) );
+//	animation.add( PropertyAnimation ( categoryRight2, CategoryFade ) );
+	animation.add( PropertyAnimation ( category, CategoryFadeStart ) );
+	animation.add( PropertyAnimation ( categoryLeft, CategoryFadeStart ) );
+//	animation.add( PropertyAnimation ( categoryLeft2, CategoryFadeStart ) );
+	animation.add( PropertyAnimation ( categoryRight, CategoryFadeStart ) );
+//	animation.add( PropertyAnimation ( categoryRight2, CategoryFadeStart ) );
+	}
+	
 /////////////////////
 //Display current time
 /////////////////////
@@ -1107,7 +1143,7 @@ cList.show();
 
 
 //View name
-
+if ( my_config["ViewNamePopup"] == "On" ){
 local mfliter2W = (flw - crw - bbm - floor( bbh * 2.875 ))
 local mfliter2H = floor( bbh * 0.15 )
 
@@ -1115,7 +1151,7 @@ local mfliter2H = floor( bbh * 0.15 )
 //mbg = fe.add_image( "backgrounds/Logos/Mid Blue.png", 0, 0, fe.layout.width, fe.layout.height ),
 //msystem = fe.add_image( "../../menu-art/flyer/[DisplayName]", flw*0.3, flh*0.5, flw*0.4, flh*0.4 ),
 mwhiteline = fe.add_image( "white.png", 0, flh*0.3, fe.layout.width, flh*0.15 ),
-mfliter = fe.add_text( "Main Menu", 0, flh*0.3, fe.layout.width, flh*0.1 ),
+mfliter = fe.add_text( "[DisplayName]", 0, flh*0.3, fe.layout.width, flh*0.1 ),
 mfliter2 = fe.add_text( "Cinematix Flyerflow View", 0, flh*0.4, fe.layout.width, mfliter2H ),
 }
 //OBJECTS.mbg.alpha = 200;
@@ -1165,3 +1201,4 @@ animation.add( PropertyAnimation( OBJECTS.mfliter, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, moveout_msysfliter ) );
+}

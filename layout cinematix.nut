@@ -20,6 +20,7 @@ class UserConfig {
    	</ label="Clock", help="Enable Clock", options="Yes,No", order=8 /> enable_clockCinematix="No";
 	</ label="Left Wheel Image", help="Fade Out Left Wheel Image", options="Yes, Fade Out,No", order=8 /> LeftWheelCinematix="Fade Out" ;
 	</ label="Art Load Delay", help="Delay Loading of snaps and flyer to optimize performance", options="On,Off", order=8 /> art_delay="" ;
+	</ label="View Name Popup", help="Disable or enable view name popup", options="On,Off", order=8 /> ViewNamePopup="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=9 /> uct4=" ";
 	
 	</ label="WHEEL OPTIONS", help="Brought to you by Project HyperPie", order=10 /> uct5=" ";  
@@ -38,7 +39,7 @@ class UserConfig {
 	</ label="GAME/SYSTEM INFO", help="Show or hide system name", order=24 /> uct12=" ";
     </ label="Title", help="Enable Title", options="Yes, No", order=25 /> enable_title="";  
 	</ label="Fade Title", help="Fade out title", options="Yes, No", order=26 /> fadeWheelTitleCinematix="Yes";
-    </ label="Game Description", help="Select Game Description Text Mode", options="Right,Popup,Off", order=27 /> select_description="";
+    </ label="Game Description", help="Select Game Description Text Mode", options="On,Off", order=27 /> select_description="";
 	</ label=" ", help="Brought to you by Project HyperPie", order=28 /> uct13=" ";
 
 	</ label="COLOUR OPTIONS", help="Brought to you by Project HyperPie", order=29 /> uct14=" ";		  
@@ -334,59 +335,48 @@ local fly = fe.layout.height;
 /////////////////
 //Game Description
 ////////////////
-if ( my_config["select_description"] == "Right" ) {
-local gtext = fe.add_text("[Overview]", flx*0.77, fly*0.2, flw*0.20, flh*0.24 );
-gtext.set_rgb( 255, 255, 255 );
-gtext.align = Align.Left;
-gtext.charsize = 25;
-gtext.rotation = 0;
-gtext.word_wrap = true;
+if ( my_config["select_description"] == "On" ){
+local image_bg = fe.add_image( "white.png", flx*0.719, bth, lbw, (flh - bth - bbh) ); 
+
+image_bg.set_rgb(bgRGB[0],bgRGB[1],bgRGB[2])
+image_bg.alpha = 150;
+image_bg.visible=true;
+
+local text = fe.add_text("info", flx*0.72, fly*0.13, flw*0.26, flh*0.7);
+text.font = "AEH.ttf"
+text.charsize = flx*0.01;
+text.align = Align.Left;
+text.word_wrap = true;
+text.alpha = 255;
+text.visible=true;
+
+fe.add_transition_callback("on_infotransition")
+
+function on_infotransition(ttype, var, ttime) {
+    if ( ttype == Transition.EndNavigation)
+        text.msg = fe.game_info(Info.Overview)
+	if ( ttype == Transition.StartLayout)
+        text.msg = fe.game_info(Info.Overview)
+	if ( ttype == Transition.ToNewList)
+        text.msg = fe.game_info(Info.Overview)
 }
 
-/////////
-if ( my_config["select_description"] == "Popup" ) {
-class PopUpImage
-{
-_my_image_bg=null;
-_my_text=null;
+fe.add_signal_handler(this, "on_signalinfo");
+function on_signalinfo(signal) {
+	if ( signal == "custom2" ){
+		if ( image_bg.visible==true ) {
+			image_bg.visible=false;
+			text.visible=false;
 
-constructor()
-{
-_my_image_bg = fe.add_image( "white.png", flx*0.715, bth, lbw*0.9, (flh - bth - bbh)*0.7 ); 
-_my_image_bg.set_rgb(bgRGB[0],bgRGB[1],bgRGB[2])
-_my_image_bg.visible=false;
-_my_image_bg.alpha = 180;
-
-_my_text = fe.add_text("[Overview]", flx*0.715, bth, lbw, flh - bth - bbh );
-_my_text.visible=false;
-_my_text.charsize = 22;
-//_my_text.set_rgb( 69, 69, 69 );
-_my_text.align = Align.Left;
-_my_text.word_wrap = true;
-_my_text.alpha = 255;
-//_my_text.style = Style.Bold;
-//_my_text.alpha= 100;
-
-fe.add_signal_handler( this, "on_signal" )
-}
-
-
-function on_signal( signal )
-{
-if ( signal == "custom1" )
-{
-_my_image_bg.visible=!_my_image_bg.visible;
-_my_text.visible=_my_image_bg.visible;
-return true;
-}
-return false;
+		} else {
+			image_bg.visible=true;
+			text.visible=true;
+		}
+		return true;
+	}
+	return false;
 }
 }
-local blah = PopUpImage();
-}
-
-
-if ( my_config["select_description"] == "Off" ) {}
  
 
 //////////////////////
@@ -1242,10 +1232,10 @@ gameListBox.y += floor( ( gameListBox.height - ( floor( gameListBox.height / gam
 
 
 // Game Listbox Animations
-local gameListBoxAnimX = Animate( gameListBox, "x", 4, glist_delay, 0.88 )
-local gameListBoxAnimA = Animate( gameListBox, "listbox_alpha", 1, glist_delay, 0.88 )
-local gameListBoxBackgroundAnimX = Animate( gameListBoxBackground, "x", 4, glist_delay, 0.88 )
-local gameListBoxBackgroundAnimA = Animate( gameListBoxBackground, "bg_alpha", 1, glist_delay, 0.88 )
+local gameListBoxAnimX = Animate( gameListBox, "x", 4, glist_delay, 0.4 )
+local gameListBoxAnimA = Animate( gameListBox, "listbox_alpha", 1, glist_delay, 0.4 )
+local gameListBoxBackgroundAnimX = Animate( gameListBoxBackground, "x", 4, glist_delay, 0.4 )
+local gameListBoxBackgroundAnimA = Animate( gameListBoxBackground, "bg_alpha", 1, glist_delay, 0.4 )
 if ( glist_delay == 0 ) {
 	gameListBoxAnimX.to = flw + flx - crw - lbw
 	gameListBoxBackgroundAnimX.to = flw + flx - crw - lbw
@@ -1595,7 +1585,7 @@ function fade_transitions( ttype, var, ttime ) {
 fe.add_transition_callback( "fade_transitions" );
 
 //View name
-
+if ( my_config["ViewNamePopup"] == "On" ){
 local mfliter2W = (flw - crw - bbm - floor( bbh * 2.875 ))
 local mfliter2H = floor( bbh * 0.15 )
 
@@ -1653,3 +1643,4 @@ animation.add( PropertyAnimation( OBJECTS.mfliter, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter, moveout_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, movein_msysfliter ) );
 animation.add( PropertyAnimation( OBJECTS.mfliter2, moveout_msysfliter ) );
+}
